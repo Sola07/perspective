@@ -1,1 +1,111 @@
 // Specific CSS for your home-page
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-texte {
+  width: 70%;
+  font-size: x-large;
+  color: rgb(18, 55, 73);
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.style-text {
+  font-size: xx-large;
+}
+
+.button-first {
+  background-color: #ff69b4;
+  border: none;
+  width: 300px;
+  height: 30px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.home-image {
+  width: 30%;
+}
+
+.home-picture {
+  height: 800px;
+  height: 500px;
+  border-radius: 45% 22% 23% 57% / 17% 30% 10% 47%;
+}
+
+.txt-perso {
+  font-size: small;
+}
+
+.btn-danger {
+  width: 150px;
+  height: 50px;
+  // display: inline-block;
+  margin: 10px auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.txt-milieu {
+  margin: 20px 70px 20px;
+  text-align: start;
+  margin-right: 230px;
+  font-size: x-large;
+}
+
+// .home-illustration {
+
+// }
+
+.main2 {
+  position: relative;
+  margin-bottom: 200px;
+  background-image: url("img-home2.avif");
+  background-position: center;
+  height: 600px;
+}
+
+.home-card {
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  padding: &épx;
+  position: absolute;
+  top: 10%;
+  left: -8%;
+  width: 400px;
+  margin: 0px 200px;
+  background-color: white;
+  box-shadow: 0px 5px 20px #999;
+  margin-top: 30px;
+  color: rgb(18, 55, 73);
+  text-align: center;
+  border-radius: 8px;
+}
+
+.button {
+  position: absolute;
+  top: 65%;
+  left: 7%;
+  background-color: #ff69b4;
+  border: none;
+  width: 300px;
+  height: 30px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
