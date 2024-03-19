@@ -1,3 +1,39 @@
 <h1>Hello c'est la page NEW - Nouvelle simulation</h1>
 
-<%= link_to 'Commencer ma simulation *', root_path, class: 'main-button' %>
+
+
+
+
+    <div class="form-cont">
+
+      <h2>Votre projet</h2>
+
+      <%= form_with model: @simulation do |f| %>
+
+        <div class="form-line">
+        <p><%= f.label :prix_du_bien, "Prix d’achat du bien immobilier FAI", class: 'form-label' %></p>
+        <p><%= f.text_field :prix_du_bien, class: 'form-control' %></p> <strong>€</strong>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :prix_travaux_renov, "Montant des travaux de rénovation", class: 'form-label' %>
+          <%= f.text_field :prix_travaux_renov, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :prix_travaux_cont, "Montant des travaux de construction", class: 'form-label' %>
+          <%= f.text_field :prix_travaux_cont, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :achat_meubles, "Achat de meubles", class: 'form-label' %>
+          <%= f.text_field :achat_meubles, class: 'form-control' %>
+        </div>
+
+        <div class="form-group bottom-action">
+          <%= link_to 'Finaliser la simulation ', root_path, class: 'btn main-button' %>
+        </div>
+
+      <% end %>
+
+    </div>
