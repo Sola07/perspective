@@ -1,0 +1,16 @@
+.form-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  width: 230px;
+  height: 36px;
+  border-color: rgb(18, 55, 73);
+  border-radius: 18px;
+}
+
+.form-label {
+  margin: auto;
+}
