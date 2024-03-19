@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_18_143241) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_19_104910) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "simulations", force: :cascade do |t|
+    t.float "prix_du_bien"
+    t.float "prix_travaux_cont"
+    t.float "prix_travaux_renov"
+    t.float "achat_meubles"
+    t.float "frais_achat"
+    t.float "apport"
+    t.integer "duree_credit_an"
+    t.float "taux_interet"
+    t.float "taux_assurance"
+    t.float "loyer_hc"
+    t.float "taxe_fonciere"
+    t.float "charges_locatives"
+    t.float "autres_charges"
+    t.float "revenu_net_impo"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_simulations_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +43,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_18_143241) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "simulations", "users"
 end
