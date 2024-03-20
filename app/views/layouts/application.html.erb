@@ -10,9 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
+  <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
-
     <%= yield %>
+  <%= render "layouts/footer" %>
   </body>
 </html>
