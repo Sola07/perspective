@@ -1,0 +1,39 @@
+
+<div class="main-container">
+
+<h2 class="title">Votre projet page 5 - Votre situation fiscale</h2>
+
+<div class="form-container">
+
+<%= simple_form_for @simulation, url: update_last_step_simulation_path(@simulation), method: :patch do |f| %>
+
+<div class="form-inline">
+  <%= f.input :revenu_net_impo,
+       label: "Taux d’imposition actuel du foyer",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline-l3", placeholder: "Ex : 10,5" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>%</strong></p>
+</div>
+
+<div class="form-inline">
+  <%= f.input :revenu_net_impo,
+       label: "Revenus annuels net imposables du foyer",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline", placeholder: "Ex : 65 000" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>€</strong></p>
+</div>
+
+</div>
+
+  <div class="form-inline">
+    <div class="progress-container">
+      <div class="progress-bar-p5"></div>
+    </div>
+
+    <%= f.button :submit, "Simulation", class: "main-button" %>
+
+  </div>
+<% end %>
+</div>
