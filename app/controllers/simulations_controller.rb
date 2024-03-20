@@ -71,6 +71,11 @@ class SimulationsController < ApplicationController
     end
   end
 
+  def show
+    @simulation = Simulation.find(params[:id])
+    # @simulation = Simulation.new
+  end
+
   private
 
   def simulation_params
