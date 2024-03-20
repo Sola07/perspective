@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: 12px;
-  box-shadow: 0 7px 7px rgba(0,0,0,0.4);
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
   padding: 6px;
   font-family: "Roboto", sans-serif;
   padding: 40px;
@@ -25,14 +25,15 @@
   color: #123749;
 }
 
-.white-header-card p, i {
+.white-header-card p,
+i {
   font-size: 16px;
   font-weight: 700;
   margin: 0px;
   color: #123749;
 }
 
-.white-header-card p  {
+.white-header-card p {
   text-align: start;
   flex-grow: 1;
   padding-right: 10px;

@@ -1,0 +1,36 @@
+.footer {
+  height: 145px;
+  background-color: rgb(217, 217, 217);
+}
+
+.footer-items {
+  width: 1200px;
+  margin: auto;
+}
+
+.mentions {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin-bottom: 8px;
+  padding-top: 16px;
+}
+
+.footer-title {
+  padding-top: 6px;
+  margin-bottom: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(18, 55, 73);
+}
+
+.mention-item {
+  margin-bottom: 4px;
+}
+
+i {
+  margin-right: 10px;
+}

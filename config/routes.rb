@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   resources :simulations do
     member do
       get :edit_first_step
+      patch :update_first_step
+      get :edit_second_step
+      patch :update_second_step
+      get :edit_third_step
+      patch :update_third_step
+      get :edit_last_step
+      patch :update_last_step
     end
   end
 

@@ -44,6 +44,24 @@
   color: rgba(18, 55, 73, 0.8);
 }
 
+.form-input-inline-l2 {
+  justify-content: flex-start;
+  width: 230px;
+  height: 36px;
+  margin-right: 14px;
+  border-radius: 18px;
+  border-color: rgb(18, 55, 73);
+}
+
+.form-input-inline-l3 {
+  justify-content: flex-start;
+  width: 230px;
+  height: 36px;
+  margin-right: -4px;
+  border-radius: 18px;
+  border-color: rgb(18, 55, 73);
+}
+
 .form-input-inline {
   justify-content: flex-start;
   width: 230px;
@@ -86,6 +104,38 @@
 .progress-bar {
   margin-left: 0px;
   width: 105px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: rgb(135, 215, 235);
+}
+
+.progress-bar-p2 {
+  margin-left: 0px;
+  width: 210px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: rgb(135, 215, 235);
+}
+
+.progress-bar-p3 {
+  margin-left: 0px;
+  width: 315px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: rgb(135, 215, 235);
+}
+
+.progress-bar-p4 {
+  margin-left: 0px;
+  width: 420px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: rgb(135, 215, 235);
+}
+
+.progress-bar-p5 {
+  margin-left: 0px;
+  width: 523px;
   height: 8px;
   border-radius: 5px;
   background-color: rgb(135, 215, 235);
