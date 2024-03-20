@@ -1,23 +1,25 @@
 <div class="main">
   <div class="home-texte">
-    <h4>Comment choisir entre  SCI et LMNP ? Quel régime fiscal adopter ?</h4>
+    <h2>Comment choisir entre  SCI et LMNP ? Quel régime fiscal adopter ?</h2>
 
     <h1 class= "style-text"> <b>Investir en toute confiance </b> </h1>
-    <h2>L’investissement locatif  pour tous</h2>
+    <h4>L’investissement locatif  pour tous</h4>
     <p>Testez notre outil gratuit et sans engagement conçu pour vous guider dans vos investissements immobiliers. </p>
 
-    <div class="button-first"> Commencer ma simulation </div>
-    <div class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</div>
+    <button class="main-button" style="padding: 4px 60px">Commencer ma simulation *</button>
 
+
+    <div class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</div>
   </div>
+
   <div class="home-image">
     <%= image_tag("img-home1.avif", class:"home-picture", alt: "description de l'image") %>
   </div>
 </div>
 
-      <br>
+
   <div class="txt-milieu">
-    <p>
+    <p id="description">
       Perspective simplifie la <b>
       gestion fiscale </b> de vos futurs investissements immobiliers en vous offrant des <b>
       recommandations personnalisées</b>, vous permettant de prendre des décisions éclairées et  d’<b>
@@ -26,16 +28,18 @@
   </div>
 
   <div class="main2">
-    <%# <div class="home-illustration"> %>
       <div class="home-card">
-        <H3>L’accès à notre simulateur est totalement gratuit et sans engagement ! </H3>
+      <h4>L’accès à notre simulateur est totalement gratuit et sans engagement ! </h4>
         <h5>Pourquoi créer un compte?</h5>
-          <ul>
-              <p> ➡️ enregistrez vos différentes simulations </p>
-              <p> ➡️ éditez vos anciennes simulations</p>
-              <p> ➡️ gagnez du temps en enregistrant vos informations </p>
-          </ul>
+          <div class="para">
+            <ul>
+                <p> ➡️ enregistrez vos différentes simulations </p>
+                <p> ➡️ éditez vos anciennes simulations</p>
+                <p> ➡️ gagnez du temps en enregistrant vos informations </p>
+            </ul>
+            </div>
       </div>
-      <div class="button"> Créer un compte</div>
-    <%# </div> %>
+      <button class="main-button" id="compte-creation">
+        Créer un compte
+      </button>
   </div>
