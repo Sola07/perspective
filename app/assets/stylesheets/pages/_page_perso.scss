@@ -1,0 +1,65 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin: 0px;
+  padding: 70px 150px;
+}
+
+.white-header-card {
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 7px 7px rgba(0,0,0,0.4);
+  padding: 6px;
+  font-family: "Roboto", sans-serif;
+  padding: 40px;
+  gap: 20px;
+}
+
+.white-header-card h2 {
+  font-size: 25px;
+  font-weight: 900;
+  color: #123749;
+}
+
+.white-header-card p, i {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0px;
+  color: #123749;
+}
+
+.white-header-card p  {
+  text-align: start;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.white-header-card-line {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.white-header-card span {
+  text-align: start;
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.date-icones {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+#appartement {
+  color: #123749;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+}
