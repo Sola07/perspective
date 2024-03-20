@@ -5,7 +5,7 @@
 
 <div class="form-container">
 
-<%= simple_form_for :user do |f| %>
+<%= simple_form_for @simulation do |f| %>
 
 <div class="form-inline">
   <%= f.input :prix_du_bien,
@@ -50,8 +50,8 @@
       <div class="progress-bar"></div>
     </div>
 
-    <% f.button :submit, "Envoyer", class: "main-button" %>
-    <%= link_to "Suivant", root_path, class: "main-button" %>
+    <%= f.button :submit, "Envoyer", class: "main-button" %>
+
   </div>
 <% end %>
 </div>
