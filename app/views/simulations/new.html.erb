@@ -1,39 +1,57 @@
-<h1>Hello c'est la page NEW - Nouvelle simulation</h1>
 
+<div class="main-container">
 
+<h2 class="title">Votre projet</h2>
 
+<div class="form-container">
 
+<%= simple_form_for :user do |f| %>
 
-    <div class="form-cont">
+<div class="form-inline">
+  <%= f.input :prix_du_bien,
+       label: "Prix d’achat du bien immobilier FAI",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline", placeholder: "Ex : 200 000" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>€</strong></p>
+</div>
 
-      <h2>Votre projet</h2>
+<div class="form-inline">
+  <%= f.input :prix_travaux_renov,
+       label: "Montant des travaux de rénovation",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline", placeholder: "Ex : 20 000" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>€</strong></p>
+</div>
 
-      <%= form_with model: @simulation do |f| %>
+<div class="form-inline">
+  <%= f.input :prix_travaux_cont,
+       label: "Montant des travaux de construction",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline", placeholder: "Ex : 40 000" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>€</strong></p>
+</div>
 
-        <div class="form-line">
-        <p><%= f.label :prix_du_bien, "Prix d’achat du bien immobilier FAI", class: 'form-label' %></p>
-        <p><%= f.text_field :prix_du_bien, class: 'form-control' %></p> <strong>€</strong>
-        </div>
+<div class="form-inline">
+  <%= f.input :achat_meubles,
+       label: "Achat de meubles",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline", placeholder: "Ex : 15 000" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>€</strong></p>
+</div>
 
-        <div class="form-group">
-          <%= f.label :prix_travaux_renov, "Montant des travaux de rénovation", class: 'form-label' %>
-          <%= f.text_field :prix_travaux_renov, class: 'form-control' %>
-        </div>
+</div>
 
-        <div class="form-group">
-          <%= f.label :prix_travaux_cont, "Montant des travaux de construction", class: 'form-label' %>
-          <%= f.text_field :prix_travaux_cont, class: 'form-control' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :achat_meubles, "Achat de meubles", class: 'form-label' %>
-          <%= f.text_field :achat_meubles, class: 'form-control' %>
-        </div>
-
-        <div class="form-group bottom-action">
-          <%= link_to 'Finaliser la simulation ', root_path, class: 'btn main-button' %>
-        </div>
-
-      <% end %>
-
+  <div class="form-inline">
+    <div class="progress-container">
+      <div class="progress-bar"></div>
     </div>
+
+    <% f.button :submit, "Envoyer", class: "main-button" %>
+    <%= link_to "Suivant", root_path, class: "main-button" %>
+  </div>
+<% end %>
+</div>
