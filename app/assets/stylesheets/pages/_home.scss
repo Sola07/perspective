@@ -8,12 +8,26 @@
   width: 70%;
   font-size: x-large;
   color: rgb(18, 55, 73);
-  margin-left: 5%;
-  margin-top: 5%;
+  margin-left: 4%;
+  padding-right: 395px;
+  padding-bottom: 8px;
+
+  // border: 2px solid red;
 }
 
+h2 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 15px;
+}
 .style-text {
-  font-size: xx-large;
+  font-size: 70px;
 }
 
 .button-first {
@@ -44,6 +58,8 @@
 
 .txt-perso {
   font-size: small;
+  // padding-bottom: 16px;
+  padding-top: 20px;
 }
 
 .btn-danger {
@@ -56,15 +72,15 @@
 }
 
 .txt-milieu {
-  margin: 20px 70px 20px;
+  margin: 10px 65px 10px;
   text-align: start;
-  margin-right: 230px;
-  font-size: x-large;
+  margin-right: 540px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 600px;
+
+  // border: 2px solid rgb(32, 15, 127);
 }
-
-// .home-illustration {
-
-// }
 
 .main2 {
   position: relative;
@@ -75,9 +91,7 @@
 }
 
 .home-card {
-  // padding-top: 20px;
-  // padding-bottom: 20px;
-  padding: &épx;
+  padding: 12px;
   position: absolute;
   top: 10%;
   left: -8%;
@@ -87,25 +101,14 @@
   box-shadow: 0px 5px 20px #999;
   margin-top: 30px;
   color: rgb(18, 55, 73);
-  text-align: center;
   border-radius: 8px;
 }
 
-.button {
-  position: absolute;
-  top: 65%;
-  left: 7%;
-  background-color: #ff69b4;
-  border: none;
-  width: 300px;
-  height: 30px;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 20px;
+.para {
+  font-size: 25px;
+  // font-weight: bold;
+}
+
+#description {
+  font-size: 20px;
 }
