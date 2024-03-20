@@ -13,6 +13,11 @@ class SimulationsController < ApplicationController
     #   render :new, status: :unprocessable_entity
   end
 
+  def show
+    @simulation = Simulation.find(params[:id])
+    # @simulation = Simulation.new
+  end
+
   private
 
   def simulation_params
