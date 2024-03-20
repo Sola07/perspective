@@ -1,8 +1,9 @@
 .background {
-  background-image: url(img-page-perso.avif);
+  background-image: url(pageperso2.jpg);
   background-position: center;
   background-size: cover;
   opacity: 0,75;
+  padding: 70px;
 }
 
 .pink-card-grid {
@@ -10,7 +11,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   margin: 0px;
-  padding: 70px 150px;
+  // padding: 70px 150px;
 }
 
 .pink-card {
@@ -18,7 +19,7 @@
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 7px 7px rgba(0,0,0,0.4);
   padding: 6px;
   font-family: "Roboto", sans-serif;
