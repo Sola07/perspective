@@ -1,31 +1,41 @@
+<div class="container-home">
 <div class="main">
-  <div class="home-texte">
-    <h2>Comment choisir entre  SCI et LMNP ? Quel régime fiscal adopter ?</h2>
+  <div class="main-text">
 
-    <h1 class= "style-text"> <b>Investir en toute confiance </b> </h1>
-    <h4>L’investissement locatif  pour tous</h4>
-    <p>Testez notre outil gratuit et sans engagement conçu pour vous guider dans vos investissements immobiliers. </p>
+    <h2 class="first-text">Comment choisir entre SCI et</h2>
+    <h2 class="first-text">LMNP ? Quel régime fiscal adopter ?</h2>
 
-    <button class="main-button" style="padding: 4px 60px">Commencer ma simulation *</button>
+  <div class="div-second-text">
+    <h1 class= "second-text">Investir en toute</h1>
+    <h1 class= "second-text">confiance</h1>
+  </div>
 
+    <h4 class= "third-text">L’investissement locatif pour tous</h4>
 
-    <div class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</div>
+  <div class="div-fourth-text">
+    <p class= "fourth-text">Testez notre outil gratuit et sans engagement conçu pour</p>
+    <p class= "fourth-text">vous guider dans vos investissements immobiliers.</p>
+  </div>
+
+  <div class="div-button">
+    <%= link_to "Commencer ma simulation *", new_user_session_path, class:"main-button" %>
+  </div>
+
+  <p class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</p>
+
   </div>
 
   <div class="home-image">
-    <%= image_tag("img-home1.avif", class:"home-picture", alt: "description de l'image") %>
+    <%= image_tag("img-home1_modified.jpg", class:"home-picture", alt: "description de l'image") %>
   </div>
+
 </div>
 
-
-  <div class="txt-milieu">
-    <p id="description">
-      Perspective simplifie la <b>
-      gestion fiscale </b> de vos futurs investissements immobiliers en vous offrant des <b>
-      recommandations personnalisées</b>, vous permettant de prendre des décisions éclairées et  d’<b>
-      optimiser vos rendements !</b>
-    </p>
-  </div>
+<div class="perspective-text">
+  <p class="medium-text"><strong class="perspective-text-inside">Perspective</strong> simplifie la <strong>gestion fiscale</strong> de vos futurs investissements</p>
+  <p class="medium-text">immobiliers en vous offrant des <strong>recommandations personnalisées</strong>, vous</p>
+  <p class="medium-text">permettant de prendre des décisions éclairées et d’<strong>optimiser vos rendements !</strong></p>
+</div>
 
   <div class="main2">
       <div class="home-card">
@@ -43,3 +53,4 @@
         Créer un compte
       </button>
   </div>
+</div>

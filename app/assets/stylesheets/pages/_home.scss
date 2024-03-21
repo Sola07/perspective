@@ -1,75 +1,156 @@
 // Specific CSS for your home-page
+// .container-home {
+//   position: relative;
+// }
+
 .main {
   display: flex;
   justify-content: space-between;
+  margin-top: 45px;
 }
 
-.home-texte {
-  width: 70%;
-  font-size: x-large;
-  color: rgb(18, 55, 73);
-  margin-left: 4%;
-  padding-right: 395px;
-  padding-bottom: 8px;
-
-  // border: 2px solid red;
-}
-
-h2 {
-  font-size: 40px;
-}
-h4 {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-p {
-  font-size: 15px;
-}
-.style-text {
-  font-size: 70px;
-}
-
-.button-first {
-  background-color: #ff69b4;
-  border: none;
-  width: 300px;
-  height: 30px;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 20px;
+.main-text {
+  margin-left: 220px;
 }
 
 .home-image {
-  width: 30%;
+  margin-left: 48px;
 }
 
 .home-picture {
-  height: 800px;
-  height: 500px;
-  border-radius: 45% 22% 23% 57% / 17% 30% 10% 47%;
+  width: 650px;
+  height: 860px;
+}
+
+.first-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  font-weight: 300;
+  color: rgb(18, 55, 73);
+  margin-bottom: 0px;
+}
+
+.second-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 92px;
+  font-weight: 900;
+  color: rgb(18, 55, 73);
+  margin-bottom: 0px;
+}
+
+.div-second-text {
+  margin-top: 50px;
+}
+
+.third-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(18, 55, 73);
+  margin-top: 50px;
+}
+
+.fourth-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(18, 55, 73);
+  margin-bottom: 0px;
+}
+
+.div-fourth-text {
+  margin-top: 40px;
+}
+
+.div-button {
+  margin-top: 40px;
 }
 
 .txt-perso {
-  font-size: small;
-  // padding-bottom: 16px;
-  padding-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(18, 55, 73);
+  margin-top: 20px;
 }
 
-.btn-danger {
-  width: 150px;
-  height: 50px;
-  // display: inline-block;
-  margin: 10px auto;
-  text-align: center;
-  padding-bottom: 10px;
+.medium-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: rgb(18, 55, 73);
+  letter-spacing: 2px;
+  margin-bottom: 0px;
 }
+
+.perspective-text-inside {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(18, 55, 73);
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+.perspective-text {
+  margin-left: 220px;
+  margin-top: 75px;
+}
+
+// .home-texte {
+//   width: 70%;
+//   font-size: x-large;
+//   color: rgb(18, 55, 73);
+//   margin-left: 4%;
+//   padding-right: 395px;
+//   padding-bottom: 8px;
+
+//   // border: 2px solid red;
+// }
+
+// h2 {
+//   font-size: 40px;
+// }
+// h4 {
+//   font-size: 25px;
+//   font-weight: bold;
+// }
+
+// p {
+//   font-size: 15px;
+// }
+// .style-text {
+//   font-size: 70px;
+// }
+
+// .button-first {
+//   background-color: #ff69b4;
+//   border: none;
+//   width: 300px;
+//   height: 30px;
+//   color: white;
+//   padding: 10px 20px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 16px;
+//   margin: 4px 2px;
+//   cursor: pointer;
+//   border-radius: 20px;
+// }
+
+// .home-image {
+//   width: 30%;
+// }
+
+// .btn-danger {
+//   width: 150px;
+//   height: 50px;
+//   // display: inline-block;
+//   margin: 10px auto;
+//   text-align: center;
+//   padding-bottom: 10px;
+// }
 
 .txt-milieu {
   margin: 10px 65px 10px;
@@ -83,6 +164,7 @@ p {
 }
 
 .main2 {
+  margin-top: 75px;
   position: relative;
   margin-bottom: 200px;
   background-image: url("img-home2.avif");
@@ -109,6 +191,6 @@ p {
   // font-weight: bold;
 }
 
-#description {
-  font-size: 20px;
-}
+// #description {
+//   font-size: 20px;
+// }

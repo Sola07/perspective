@@ -10,9 +10,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/home";
 @import "components/button";
 @import "components/form";
 @import "components/footer";
+
+body {
+  background-color: white;
+}
 
 // html,
 // body {
