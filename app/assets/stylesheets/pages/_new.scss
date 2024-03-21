@@ -1,0 +1,121 @@
+.main-new {
+  align-items: center;
+  justify-content: center;
+  // height: 400px;
+  width: 400px;
+  margin-left: 40%;
+  margin-top: 3%;
+  // padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 10px;
+}
+
+.new-logo {
+  text-align: center;
+  background-image: url(app/assets/images/logo-perspective-OR.png);
+  margin-bottom: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  color: black;
+}
+
+.new-email {
+  margin-bottom: 20px;
+  box-shadow: rgba(221, 224, 226, 0.2) 0px 8px 24px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 20px;
+  color: black;
+}
+
+.new-password {
+  margin-bottom: 20px;
+  box-shadow: rgba(221, 224, 226, 0.2) 0px 8px 24px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 20px;
+  color: black;
+}
+
+.new-signin {
+  padding-right: 1px;
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(to right, #304352, #d7d2cc);
+  color: white;
+}
+
+.new-card {
+  // background-color: #fdf2f3;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  gap: 20px;
+}
+.input-perso2 {
+  color: #6c838e;
+  background-color: white;
+  text-align: center;
+  // width: 130px;
+  border: 1px solid #6c838e;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.div-button {
+  text-align: center;
+}
+
+.form-container {
+  justify-content: center;
+  width: 800px;
+  margin: auto;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.form-group-inline {
+  display: flex;
+  align-items: center;
+}
+.form-input-inline-l2 {
+  justify-content: flex-start;
+  width: 230px;
+  height: 36px;
+  margin-right: 14px;
+  border-radius: 18px;
+  border-color: rgb(18, 55, 73);
+}
+.form-label-inline {
+  margin-top: 5px;
+  margin-right: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(18, 55, 73, 0.8);
+}
+
+.text-space {
+  margin-top: 6px;
+  margin-left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: rgba(18, 55, 73, 0.8);
+}

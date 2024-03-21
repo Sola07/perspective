@@ -35,7 +35,13 @@ h3 {
 
 .result-name {
   background-color: rgb(245, 245, 228);
-  border-radius: 8px;
+  border-radius: 8px 8px 0px 0px;
+  // border-radius: 8px;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
+  // padding: 10px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .result_card {
@@ -68,14 +74,7 @@ h3 {
   padding-bottom: 1px;
   height: auto;
   min-width: 200px;
-  border-radius: 8px;
-}
-
-.result-name {
-  color: rgb(18, 55, 73);
-  font-family: "Roboto", sans-serif;
-  padding: 10px;
-  padding-bottom: 40px;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .result_impot {
