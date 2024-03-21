@@ -1,12 +1,33 @@
-.navbar-lewagon {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgb(18, 55, 73);
+  color: white;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-brand {
+  font-weight: bold;
+  color: white;
 }
 
-.navbar-lewagon .navbar-brand img {
+.logout-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.avatar {
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
