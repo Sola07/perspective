@@ -1,6 +1,14 @@
-<div class="main-container">
+<div class="background-container">
 
-<h2 class="title">Votre projet page 3 - Recettes locatives</h2>
+<div class="main-container-form">
+
+<div class="breadcrumb">
+<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<%= link_to "Financement", edit_first_step_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i> <strong>Recettes locatives</strong>
+</h2>
+</div>
 
 <div class="form-container">
 
@@ -36,4 +44,5 @@
 
   </div>
 <% end %>
+</div>
 </div>

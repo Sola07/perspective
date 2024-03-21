@@ -38,19 +38,34 @@
 </div>
 
   <div class="main2">
+
+    <div class="home-button">
+
       <div class="home-card">
-      <h4>L’accès à notre simulateur est totalement gratuit et sans engagement ! </h4>
-        <h5>Pourquoi créer un compte?</h5>
-          <div class="para">
-            <ul>
-                <p> ➡️ enregistrez vos différentes simulations </p>
-                <p> ➡️ éditez vos anciennes simulations</p>
-                <p> ➡️ gagnez du temps en enregistrant vos informations </p>
-            </ul>
-            </div>
-      </div>
-      <button class="main-button" id="compte-creation">
-        Créer un compte
-      </button>
+
+        <div class="div-home-card-txt-1">
+          <h4 class="home-card-txt-1">L’accès à notre simulateur est totalement</h4>
+          <h4 class="home-card-txt-1">gratuit et sans engagement ! </h4>
+        </div>
+
+        <h5 class="compte-text">Pourquoi créer un compte?</h5>
+
+        <div class="para">
+          <p>➡️ enregistrez vos différentes simulations</p>
+          <p>➡️ éditez vos anciennes simulations</p>
+          <p>➡️gagnez du temps en enregistrant vos informations</p>
+        </div>
+
+        <div class="div-button-account">
+          <%= link_to "Créer un compte", new_user_session_path, class:"main-button" %>
+        </div>
+
+        </div>
+
+
+
+    </div>
+
   </div>
+
 </div>
