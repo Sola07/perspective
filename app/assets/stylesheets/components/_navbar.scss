@@ -4,12 +4,16 @@ body {
 }
 
 .navbar {
+  // Hex #123749
   background-color: rgb(18, 55, 73);
-  color: white;
+  // color: white;
+  color: rgb(230, 172, 60);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  // Hex couleur 'or' #E6AC3C
+  // rgb couleur 'or' rgb(230, 172, 60)
 }
 
 .navbar-brand {
@@ -19,7 +23,8 @@ body {
 
 .logout-btn {
   background-color: transparent;
-  color: white;
+  // color: white;
+  color: rgb(230, 172, 60);
   border: none;
   cursor: pointer;
   font-size: 14px;

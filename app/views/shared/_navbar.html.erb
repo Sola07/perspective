@@ -1,7 +1,11 @@
  <nav class="navbar">
         <div class="navbar-brand">PERSPECTIVE</div>
+        <%# <%= link_to "Home", root_path, class: ""%>
+
+
         <div class="navbar-avatar">
-            <button class="logout-btn">Se déconnecter</button>
-            <img src="avatar.png" alt="Avatar" class="avatar">
+            <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "logout-btn"  %>
+
+            <img src="logo-perspective-OR.png" alt="" class="avatar">
         </div>
     </nav>
