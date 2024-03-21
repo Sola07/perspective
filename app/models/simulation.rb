@@ -4,7 +4,7 @@ class Simulation < ApplicationRecord
   TX_VAC = 0.02
   TX_IND_AN_LOY = 0.01
   TX_IND_AN_CH = 0.01
-
+# ------------------ recettes locatives -------------
   def loyer_cc
     loyer_hc + (charges_locatives / 12 )
   end
@@ -12,7 +12,7 @@ class Simulation < ApplicationRecord
   def recette_loc
     return ((self.loyer_cc * 12) * (1 - TX_VAC))
   end
-
+# ------------------ Acquisition du bien -------------
   def frais_notaire
     droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (prix_du_bien * 0.045))
     frais_deb_annexes = 1200 + (prix_du_bien * 0.001)
@@ -43,7 +43,7 @@ class Simulation < ApplicationRecord
   def total_acq
     self.frais_notaire + prix_du_bien + prix_travaux_cont + prix_travaux_renov + achat_meubles + frais_achat
   end
-
+ # ------------------- Banque -------------------
   def mont_cre
     self.total_acq - apport
   end
@@ -87,9 +87,47 @@ class Simulation < ApplicationRecord
   def tx_int_m
     taux_interet / 12
   end
-
-  def int_emp
+ # ----------------- ici c'est pas bon -----------
+  def int_emp_m
     mont_cre * tx(tx_int_m)
   end
+
+  # def capital_total
+  #   mont_cre - int_emp_m
+  # end
+
+  # def cap_remb
+  #   mens_ss_ass - int_emp_m
+  # end
+
+  # def cap_rest
+  #   capital_total -= cap_remb
+  # end
+
+  # ------------------- charges -------------------
+
+  def charg_an
+    (self.cout_ass_m * 12) + (self.int_emp_m * 12) + taxe_fonciere + (charges_locatives)
+  end
+  # ------------------ bilan mensuel ---------------
+  def bilan_me_av_impots
+    (recette_loc / 12) - (charg_an / 12)
+  end
+
+  def cash_me_av_impots
+    bilan_me_av_impots - mens_ss_ass + (int_emp_m)
+  end
+
+  # ------------------- rendements -------------------
+  def rend_brut
+    ((loyer_hc * 12 * ( 1 - TX_VAC )) / total_acq) * 100
+  end
+
+  def rend_net
+    ((loyer_hc * 12 * (1 - TX_VAC) - charg_an) / total_acq) * 100
+  end
+
+ # ------------------- Fiscalité ---------------------
+
 
 end
