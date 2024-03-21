@@ -12,7 +12,7 @@
 
 <div class="form-container">
 
-<%= simple_form_for @simulation, url: update_second_step_simulation_path(@simulation), method: :patch do |f| %>
+<%= simple_form_for @simulation, url: update_second_step_simulation_path(@simulation), data: { turbo: false}, method: :patch do |f| %>
 
 <div class="form-inline">
   <%= f.input :loyer_hc,
@@ -32,14 +32,6 @@
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
-<div class="form-inline">
-  <%= f.input :charges_locatives,
-       label: "Loyer mensuel estimé CC",
-       wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 1 400" },
-       label_html: { class: "form-label-inline" }
-  %><p class="text-space"><strong>€</strong></p>
-</div>
 
 </div>
 

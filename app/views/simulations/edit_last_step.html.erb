@@ -17,7 +17,7 @@
 
 <div class="form-container">
 
-<%= simple_form_for @simulation, url: update_last_step_simulation_path(@simulation), method: :patch do |f| %>
+<%= simple_form_for @simulation, url: update_last_step_simulation_path(@simulation), data: { turbo: false}, method: :patch do |f| %>
 
 <div class="form-inline">
   <%= f.input :revenu_net_impo,
