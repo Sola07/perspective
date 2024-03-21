@@ -1,67 +1,101 @@
 h3 {
   padding-left: 170px;
-  padding-top: 30px;
+  padding-top: 10px;
   font-weight: bold;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
 }
 
 .result_container {
   display: flex;
   align-items: flex-end;
-  margin-left: 150px;
+  margin-left: 170px;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
 }
 
 .result_header {
-  text-decoration: underline;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
+
   p {
-    height: 50px;
+    height: 30px;
+    border-bottom: 2px solid #ccc;
+    color: rgb(18, 55, 73);
+    font-family: "Roboto", sans-serif;
   }
   p:last-child {
-    height: 20px;
-    margin: 0;
+    height: 30px;
+    font-weight: bold;
+    color: rgb(18, 55, 73);
+    font-family: "Roboto", sans-serif;
   }
-  margin: 20px;
+  margin: 1px;
+}
+
+.result-name {
+  background-color: rgb(245, 245, 228);
+  border-radius: 8px;
 }
 
 .result_card {
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
   p {
-    height: 50px;
-    :last-child {
-      height: 20px;
-      margin: 0;
-    }
+    height: 30px;
+    color: rgb(18, 55, 73);
+    font-family: "Roboto", sans-serif;
   }
   p:last-child {
     height: 20px;
     margin: 0;
   }
-  margin: 20px;
+  margin: 10px;
   text-align: center;
   border: 1px solid black;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
+  border-radius: 8px;
 }
 
 .result_card_bottom_pink {
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
   background-color: rgb(253, 242, 243);
   padding-top: 10px;
   padding-bottom: 1px;
   height: auto;
   min-width: 200px;
+  border-radius: 8px;
 }
 
 .result-name {
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
   padding: 10px;
+  padding-bottom: 40px;
 }
 
 .result_impot {
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   padding-bottom: 1px;
 }
 
-.h3 {
+h5 {
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 #result_main_btn {
-  // align-items: center;
-  // justify-content: center;
-  text-align: center;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  left: 40%;
+  margin-bottom: 20px;
 }
