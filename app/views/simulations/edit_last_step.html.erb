@@ -1,7 +1,19 @@
+<div class="background-container">
 
-<div class="main-container">
+<div class="main-container-form">
 
-<h2 class="title">Votre projet page 5 - Votre situation fiscale</h2>
+
+<div class="breadcrumb">
+<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<%= link_to "Financement", edit_first_step_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<%= link_to "Recettes locatives", edit_second_step_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<%= link_to "Charges", edit_third_step_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i> <strong>Votre situation fiscale</strong>
+</h2>
+</div>
 
 <div class="form-container">
 
@@ -36,4 +48,5 @@
 
   </div>
 <% end %>
+</div>
 </div>

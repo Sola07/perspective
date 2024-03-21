@@ -1,17 +1,36 @@
-.main-container {
+.background-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.25)
+    ),
+    asset-url("img-sim.avif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.main-container-form {
   background-color: white;
   width: 1100px;
   padding: 45px 115px 65px 45px;
   margin: auto;
-  margin-top: 120px;
 }
 
-.title {
+.title-form {
   justify-content: flex-start;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 400;
   margin-bottom: 55px;
+}
+
+.link-back {
+  text-decoration: none;
+  color: rgb(18, 55, 73);
 }
 
 .form-container {
@@ -143,4 +162,11 @@
   height: 8px;
   border-radius: 5px;
   background-color: rgb(135, 215, 235);
+}
+
+i {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 4px;
+  color: rgb(18, 55, 73);
 }

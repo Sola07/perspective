@@ -1,9 +1,16 @@
+<div class="background-container">
 
-<div class="main-container">
+<div class="main-container-form">
 
-<h2 class="title">Votre projet page 2 - Financement</h2>
+
+<div class="breadcrumb">
+<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<strong>Financement</strong></h2>
+</div>
 
 <div class="form-container">
+
 
 <%= simple_form_for @simulation, url: update_first_step_simulation_path(@simulation), method: :patch do |f| %>
 
@@ -63,4 +70,5 @@
 
   </div>
 <% end %>
+</div>
 </div>
