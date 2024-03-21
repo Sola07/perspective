@@ -23,7 +23,16 @@
 .form-inline {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-bottom: 4px;
+}
+
+.form-inline-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 4px;
+  margin-top: 30px;
 }
 
 .form-group-inline {
@@ -89,7 +98,6 @@
 
 .progress-container {
   margin: auto;
-  margin-top: 50px;
   width: 525px;
   height: 10px;
   border-radius: 5px;
