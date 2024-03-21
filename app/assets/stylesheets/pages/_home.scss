@@ -10,7 +10,7 @@
 }
 
 .main-text {
-  margin-left: 220px;
+  margin-left: 110px;
 }
 
 .home-image {
@@ -35,7 +35,7 @@
   font-size: 92px;
   font-weight: 900;
   color: rgb(18, 55, 73);
-  margin-bottom: 0px;
+  margin-bottom: -6px;
 }
 
 .div-second-text {
@@ -80,7 +80,7 @@
   font-weight: 400;
   color: rgb(18, 55, 73);
   letter-spacing: 2px;
-  margin-bottom: 0px;
+  margin-bottom: -4px;
 }
 
 .perspective-text-inside {
@@ -93,9 +93,70 @@
 }
 
 .perspective-text {
-  margin-left: 220px;
+  margin-left: 110px;
   margin-top: 75px;
 }
+
+.main2 {
+  margin-top: 75px;
+  padding-top: 125px;
+  padding-bottom: 225px;
+  background-image: asset-url("img-home2.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-card {
+  // top: 10%;
+  // left: -8%;
+  width: 600px;
+  margin-left: 110px;
+  background-color: white;
+  box-shadow: 0px 5px 20px #999;
+  margin-top: 30px;
+  color: rgb(18, 55, 73);
+  position: relative;
+  // border-radius: 8px;
+}
+
+.div-home-card-txt-1 {
+  padding-top: 45px;
+}
+
+.home-card-txt-1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 45px;
+  margin-bottom: 0px;
+}
+
+.compte-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.para {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 45px;
+  padding-bottom: 50px;
+}
+
+.div-button-account {
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .para-1 {
+
+// }
 
 // .home-texte {
 //   width: 70%;
@@ -152,45 +213,17 @@
 //   padding-bottom: 10px;
 // }
 
-.txt-milieu {
-  margin: 10px 65px 10px;
-  text-align: start;
-  margin-right: 540px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  font-size: 600px;
-
-  // border: 2px solid rgb(32, 15, 127);
-}
-
-.main2 {
-  margin-top: 75px;
-  position: relative;
-  // margin-bottom: 200px;
-  background-image: url("img-home2.avif");
-  background-position: center;
-  height: 600px;
-}
-
-.home-card {
-  padding: 12px;
-  position: absolute;
-  top: 10%;
-  left: -8%;
-  width: 400px;
-  margin: 0px 200px;
-  background-color: white;
-  box-shadow: 0px 5px 20px #999;
-  margin-top: 30px;
-  color: rgb(18, 55, 73);
-  border-radius: 8px;
-}
-
-.para {
-  font-size: 25px;
-  // font-weight: bold;
-}
-
 // #description {
 //   font-size: 20px;
+// }
+
+// .txt-milieu {
+//   margin: 10px 65px 10px;
+//   text-align: start;
+//   margin-right: 540px;
+//   margin-bottom: 30px;
+//   margin-top: 30px;
+//   font-size: 600px;
+
+//   // border: 2px solid rgb(32, 15, 127);
 // }

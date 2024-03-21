@@ -1,10 +1,21 @@
-<div class="main-container">
+<div class="background-container">
 
-<h2 class="title">Votre projet page 4 - Charges</h2>
+<div class="main-container-form">
+
+<div class="breadcrumb">
+<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<%= link_to "Financement", edit_first_step_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i>
+<%= link_to "Recettes locatives", edit_second_step_simulation_path, class:"link-back" %>
+<i class="fa-solid fa-chevron-right"></i> <strong>Charges</strong>
+</h2>
+</div>
+
 
 <div class="form-container">
 
-<%= simple_form_for @simulation, url: update_third_step_simulation_path(@simulation), method: :patch do |f| %>
+<%= simple_form_for @simulation, url: update_third_step_simulation_path(@simulation), data: { turbo: false}, method: :patch do |f| %>
 
 <div class="form-inline">
   <%= f.input :autres_charges,
@@ -35,4 +46,5 @@
 
   </div>
 <% end %>
+</div>
 </div>

@@ -1,11 +1,12 @@
+<div class="background-container">
 
-<div class="main-container">
+<div class="main-container-form">
 
-<h2 class="title">Votre projet</h2>
+<h2 class="title-form">Votre projet</h2>
 
 <div class="form-container">
 
-<%= simple_form_for @simulation do |f| %>
+<%= simple_form_for @simulation, data: {turbo: false} do |f| %>
 
 <div class="form-inline">
   <%= f.input :prix_du_bien,
@@ -43,6 +44,15 @@
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
+<div class="form-inline">
+  <%= f.input :frais_achat,
+       label: "Frais d'achat",
+       wrapper_html: { class: "form-group-inline" },
+       input_html: { class: "form-input-inline", placeholder: "Ex : 1 500" },
+       label_html: { class: "form-label-inline" }
+  %><p class="text-space"><strong>€</strong></p>
+</div>
+
 </div>
 
   <div class="form-inline-btn">
@@ -54,4 +64,5 @@
 
   </div>
 <% end %>
+</div>
 </div>
