@@ -5,7 +5,7 @@
 
 <div class="form-container">
 
-<%= simple_form_for @simulation do |f| %>
+<%= simple_form_for @simulation, data: {turbo: false} do |f| %>
 
 <div class="form-inline">
   <%= f.input :prix_du_bien,
