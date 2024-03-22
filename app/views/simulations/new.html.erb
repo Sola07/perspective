@@ -2,7 +2,7 @@
 
 <div class="main-container-form">
 
-<h2 class="title-form">Votre projet</h2>
+<h2 class="title-form"><strong>Votre projet</strong></h2>
 
 <div class="form-container">
 
@@ -12,9 +12,15 @@
   <%= f.input :prix_du_bien,
        label: "Prix d’achat du bien immobilier FAI",
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 200 000" },
-       label_html: { class: "form-label-inline" }
-  %><p class="text-space"><strong>€</strong></p>
+       input_html: {
+       type: "number",
+       class: "form-input-inline",
+       placeholder: "Ex : 200000",
+       pattern: "\\d{6}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6);",
+       required: "required" },
+       label_html: { class: "form-label-inline" } %>
+       <p class="text-space"><strong>€</strong></p>
 </div>
 
 <div class="form-inline">
