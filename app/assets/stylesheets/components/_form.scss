@@ -18,12 +18,14 @@
   width: 1100px;
   padding: 45px 115px 65px 45px;
   margin: auto;
+  box-shadow: 4px 4px 8px rgb(75, 75, 75);
+  border-radius: 10px;
 }
 
 .title-form {
   justify-content: flex-start;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 400;
   margin-bottom: 55px;
 }
@@ -102,7 +104,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: rgba(18, 55, 73, 0.6);
+  color: rgba(18, 55, 73, 0.4);
   font-style: italic;
 }
 
@@ -165,7 +167,7 @@
 }
 
 i {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: bold;
   margin-left: 4px;
   color: rgb(18, 55, 73);
