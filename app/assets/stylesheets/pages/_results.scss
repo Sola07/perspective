@@ -6,12 +6,23 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 
+.result_add_table {
+  margin-top: 40px;
+}
+
+.title_result_add_table {
+  margin-bottom: 20px;
+}
+
 .result_container {
+  background-color: white;
   display: flex;
   align-items: flex-end;
   margin-left: 170px;
   color: rgb(18, 55, 73);
   font-family: "Roboto", sans-serif;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .result_header {

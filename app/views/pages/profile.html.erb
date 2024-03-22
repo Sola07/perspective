@@ -92,41 +92,41 @@
   </div>
 
 
-              <div class="result_add_table">
+            <div class="result_add_table">
 
-              <h3>Simulation fiscale</h3>
+              <h3 class="title_result_add_table">Simulation fiscale</h3>
                 <div class="result_container">
 
                   <div class="result_header">
                     <p>Loyer annuel</p>
-                    <p>Abbatement</p>
+                    <p>Charges déductibles</p>
                     <p>Amortissement immobilier</p>
                     <p>Amortissement mobilier</p>
-                    <p>Charges</p>
+                    <p>Charges annuelles</p>
                     <p>Intérêts d'emprunt</p>
                     <p>Revenus imposables</p>
                     <p>Taux d'imposition</p>
-                    <p>Impôts à payer</p>
+                    <p>Coût en  impôts de l’opération</p>
 
                   </div>
 
                   <div class="result_card">
-                    <p class="result-name">Location Meublée <br> Non Professionnelle</p>
+                    <p class="result-name">Location meublée<br>Micro-Bic</p>
                       <div class="result_card_bottom_pink">
-                        <p>18 400 euros</p>
-                        <p>0%</p>
+                        <p><%= @simulation.recette_loc %> euros</p>
+                        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
                         <p>7 700 euros</p>
                         <p>3 000 euros</p>
-                        <p>25 000 euros</p>
-                        <p>2 000 euros</p>
-                        <p> - </p>
+                        <p><%= @simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges %> euros</p>
+                        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
+                        <p><%= @simulation.revenu_net_impo %> euros</p>
                         <p>41%</p>
                         <p class="result_impot"> 0 euros</p>
                       </div>
                   </div>
 
                   <div class="result_card">
-                    <p class="result-name">Nom propre</p>
+                    <p class="result-name">Location Meublée Non <br>Professionnelle au Réel</p>
                     <div class="result_card_bottom_pink">
                     <p>18 400 euros</p>
                     <p>0%</p>
@@ -172,6 +172,6 @@
 
                 </div>
 
-              </div>
+            </div>
 
 </div>
