@@ -29,7 +29,7 @@ class Simulation < ApplicationRecord
 
 # droit d'enregistrement = droix départementale (4.5%) + taxe communale(1.2%) + frais d'assiette du droit départementale (2.7%)
 
-    droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (prix_du_bien * 0.045))
+    droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (self.prix_du_bien * 0.045))
 
 # frais et débours annexes = frais de formalités, copies et débours
 # + contributions de sécurité immobiliėre
