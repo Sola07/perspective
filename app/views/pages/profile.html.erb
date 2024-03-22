@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="results" >
-        <%= link_to "#", class:"main-button" do %>
+        <%= link_to new_simulation_path, data: {turbo: false}, class:"main-button" do %>
           <span>Faire une nouvelle simulation</span>
         <% end %>
       </div>
@@ -113,7 +113,7 @@
                   <div class="result_card">
                     <p class="result-name">Location meublée<br>Micro-Bic</p>
                       <div class="result_card_bottom_pink">
-                        <p><%= @simulation.recette_loc %> euros</p>
+                        <p><%= @simulation.recette_loc.round(2) %> euros</p>
                         <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
                         <p>7 700 euros</p>
                         <p>3 000 euros</p>

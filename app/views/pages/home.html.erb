@@ -18,7 +18,7 @@
   </div>
 
   <div class="div-button">
-    <%= link_to "Commencer ma simulation *", new_user_session_path, class:"main-button" %>
+    <%= link_to "Commencer ma simulation *",  new_simulation_path, data: {turbo: false}, class:"main-button" %>
   </div>
 
   <p class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</p>
@@ -58,7 +58,7 @@
         </div>
 
         <div class="div-button-account">
-          <%= link_to "Créer un compte", new_user_session_path, class:"main-button" %>
+          <%= link_to "Créer un compte", user_session_path, class:"main-button" %>
         </div>
 
         </div>

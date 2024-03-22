@@ -8,17 +8,30 @@ body {
   background-color: rgb(18, 55, 73);
   // color: white;
   color: rgb(230, 172, 60);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+
+  // padding: 10px 20px;
   // Hex couleur 'or' #E6AC3C
   // rgb couleur 'or' rgb(230, 172, 60)
 }
 
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar-brand {
-  font-weight: bold;
-  color: white;
+  width: 160px;
+  height: 50px;
+  background-image: asset-url("logo-perspective-OR.png");
+  background-size: 110%;
+  background-position: center;
+  padding: 0px;
+  margin-top: 15px;
+  margin-left: 50px;
+
+  // font-weight: bold;
+  // color: white;
 }
 
 .logout-btn {
@@ -28,11 +41,14 @@ body {
   border: none;
   cursor: pointer;
   font-size: 14px;
-  margin-right: 10px;
+  margin-right: 50px;
+  text-decoration: none;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
+// .navbar-avatar-img {
+//   background-color: white;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+//   margin-right: 50px;
+// }
