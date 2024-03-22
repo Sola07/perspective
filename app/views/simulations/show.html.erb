@@ -80,8 +80,5 @@
 
   <div>
     <h5>Vous souhaitez enregistrer votre projet, le modifier ou faire une nouvelle simulation ?</h5>
-
-  <button class="main-button" id="result_main_btn">
-          Enregistrer la simulation
-        </button>
+    <%= link_to "Enregistrer ma simulation",  profile_path, data: {turbo: false}, class:"main-button", id: "result_main_btn" %>
   </div>
