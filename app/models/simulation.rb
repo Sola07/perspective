@@ -266,9 +266,9 @@ class Simulation < ApplicationRecord
 
  # charges deductibles de 50 % (charges deductibles)
 
-  def char_deduct_lmnp_mb
-    abatt_50_lmnp_mb
-  end
+def char_deduct_lmnp_mb
+  abatt_50_lmnp_mb
+end
 
 # coût impot
 

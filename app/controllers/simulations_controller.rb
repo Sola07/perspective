@@ -83,6 +83,6 @@ class SimulationsController < ApplicationController
                                        :apport, :duree_credit_an, :taux_interet, :taux_assurance,
                                        :loyer_hc, :charges_locatives,
                                        :autres_charges, :taxe_fonciere,
-                                       :revenu_net_impo)
+                                       :revenu_net_global)
   end
 end
