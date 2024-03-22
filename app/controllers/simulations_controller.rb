@@ -65,7 +65,7 @@ class SimulationsController < ApplicationController
     @simulation = Simulation.find(params[:id])
     @simulation.update(simulation_params)
     if @simulation.save
-      redirect_to profile_path(@simulation)
+      redirect_to simulation_path(@simulation)
     else
       render :edit_last_step, status: :unprocessable_entity
     end
