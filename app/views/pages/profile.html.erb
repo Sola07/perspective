@@ -34,17 +34,17 @@
         <div class="pink-card">
           <h2>Votre projet</h2>
             <div>
-              <span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso">60 000 €</div></span>
-              <span class="card-line"><p>Frais de notaire</p><div class="input-perso">60 000 €</div></span>
+              <span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso"><%= @simulation.total_acq %></div></span>
+              <span class="card-line"><p>Frais de notaire</p><div class="input-perso"> <%=  @simulation.frais_notaire.round(2) %> </div></span>
               <span class="card-line"><p>Travaux</p><div class="input-perso">60 000 €</div></span>
-              <span class="card-line"><p>Achat meubles</p><div class="input-perso">60 000 €</div></span>
+              <span class="card-line"><p>Achat meubles</p><div class="input-perso"><%= @simulation.achat_meubles %></div></span>
             </div>
         </div>
         <div class="pink-card">
           <h2>Recettes locatives</h2>
             <div>
-              <span class="card-line"><p>Loyer mensuel HC</p><div class="input-perso">900 €</div></span>
-              <span class="card-line"><p>Loyer menseul CC</p><div class="input-perso">990 €</div></span>
+              <span class="card-line"><p>Loyer mensuel HC</p><div class="input-perso"><%= @simulation.loyer_hc %></div></span>
+              <span class="card-line"><p>Loyer mensuel CC</p><div class="input-perso"><%= @simulation.loyer_cc %></div></span>
               <span class="card-line"><p>Taux de révision loyer IRL</p><div class="input-perso">1%</div></span>
               <span class="card-line"><p>Taux de vacance locative</p><div class="input-perso">2%</div></span>
             </div>
@@ -52,39 +52,39 @@
         <div class="pink-card">
         <h2>Recettes locatives</h2>
           <div>
-            <span class="card-line"><p>Charges locatives(an)</p><div class="input-perso">800 €</div></span>
-            <span class="card-line"><p>Autres charges</p><div class="input-perso">900 €</div></span>
+            <span class="card-line"><p>Charges locatives(an)</p><div class="input-perso"><%= @simulation.charges_locatives %></div></span>
+            <span class="card-line"><p>Autres charges</p><div class="input-perso"><%= @simulation.autres_charges %></div></span>
             <span class="card-line"><p>Taux d'indexation charges</p><div class="input-perso">1%</div></span>
-            <span class="card-line"><p>Taxe foncière annuelle</p><div class="input-perso">1200</div></span>
-            <span class="card-line"><p>Intérêt d'emprunt</p><div class="input-perso">4200</div></span>
-            <span class="card-line"><p>Assurance crédit</p><div class="input-perso">90 €</div></span>
+            <span class="card-line"><p>Taxe foncière annuelle</p><div class="input-perso"><%= @simulation.taxe_fonciere %></div></span>
+            <span class="card-line"><p>Intérêt d'emprunt</p><div class="input-perso"><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round(2) %></div></span>
+            <span class="card-line"><p>Assurance crédit</p><div class="input-perso"> <%= @simulation.ass_cr.round(2) %></div></span>
           </div>
         </div>
         <div class="pink-card">
           <h2>Financement</h2>
             <div>
-              <span class="card-line"><p>Apport</p><div class="input-perso">40 000 €</div></span>
-              <span class="card-line"><p>Montant du crédit</p><div class="input-perso">25 000 €</div></span>
-              <span class="card-line"><p>Durée du crédit</p><div class="input-perso">20 ans</div></span>
+              <span class="card-line"><p>Apport</p><div class="input-perso"><%= @simulation.apport %></div></span>
+              <span class="card-line"><p>Montant du crédit</p><div class="input-perso"><%= @simulation.mont_cre %></div></span>
+              <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= @simulation.duree_m %></div></span>
               <span class="card-line"><p>Taux d'intérêt</p><div class="input-perso">2,5%</div></span>
               <span class="card-line"><p>Taux assurance emprunt</p><div class="input-perso">0,25%</div></span>
-              <span class="card-line"><p>Mensualités</p><div class="input-perso">530 €</div></span>
+              <span class="card-line"><p>Mensualités</p><div class="input-perso"><%= @simulation.mens_ass.round(2) %></div></span>
             </div>
         </div>
         <div class="pink-card">
           <h2>Bilan mensuel avant impôts</h2>
             <div>
-              <span class="card-line"><p>Recettes locatives</p><div class="input-perso">823 €</div></span>
-              <span class="card-line"><p>Charges totales</p><div class="input-perso">900 €</div></span>
-              <span class="card-line"><p>Résultats</p><div class="input-perso">312,23 €</div></span>
+              <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= @simulation.recette_loc %></div></span>
+              <span class="card-line"><p>Charges totales</p><div class="input-perso"><%= @simulation.charg_an.round(2) %></div></span>
+              <span class="card-line"><p>Résultats</p><div class="input-perso"><%= @simulation.bilan_me_av_impots.round(2) %></div></span>
             </div>
         </div>
         <div class="results">
           <div class="pink-card result">
-            <span class="card-line"><h2>Recettes locatives</h2><div class="input-perso">43,4 €</div></span>
+            <span class="card-line"><h2>Recettes locatives</h2><div class="input-perso"><%= @simulation.recette_loc %></div></span>
           </div>
           <div class="pink-card result">
-            <span class="card-line"><h2>Rentabilité nette</h2><div class="input-perso">6%</div></span>
+            <span class="card-line"><h2>Rentabilité nette</h2><div class="input-perso"><%= @simulation.rent_net_lmnp_mb.round(2) %></div></span>
           </div>
           </div>
       </div>
@@ -92,41 +92,41 @@
   </div>
 
 
-              <div class="result_add_table">
+            <div class="result_add_table">
 
-              <h3>Simulation fiscale</h3>
+              <h3 class="title_result_add_table">Simulation fiscale</h3>
                 <div class="result_container">
 
                   <div class="result_header">
                     <p>Loyer annuel</p>
-                    <p>Abbatement</p>
+                    <p>Charges déductibles</p>
                     <p>Amortissement immobilier</p>
                     <p>Amortissement mobilier</p>
-                    <p>Charges</p>
+                    <p>Charges annuelles</p>
                     <p>Intérêts d'emprunt</p>
                     <p>Revenus imposables</p>
                     <p>Taux d'imposition</p>
-                    <p>Impôts à payer</p>
+                    <p>Coût en  impôts de l’opération</p>
 
                   </div>
 
                   <div class="result_card">
-                    <p class="result-name">Location Meublée <br> Non Professionnelle</p>
+                    <p class="result-name">Location meublée<br>Micro-Bic</p>
                       <div class="result_card_bottom_pink">
-                        <p>18 400 euros</p>
-                        <p>0%</p>
+                        <p><%= @simulation.recette_loc %> euros</p>
+                        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
                         <p>7 700 euros</p>
                         <p>3 000 euros</p>
-                        <p>25 000 euros</p>
-                        <p>2 000 euros</p>
-                        <p> - </p>
+                        <p><%= @simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges %> euros</p>
+                        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
+                        <p><%= @simulation.revenu_net_impo %> euros</p>
                         <p>41%</p>
                         <p class="result_impot"> 0 euros</p>
                       </div>
                   </div>
 
                   <div class="result_card">
-                    <p class="result-name">Nom propre</p>
+                    <p class="result-name">Location Meublée Non <br>Professionnelle au Réel</p>
                     <div class="result_card_bottom_pink">
                     <p>18 400 euros</p>
                     <p>0%</p>
@@ -172,6 +172,6 @@
 
                 </div>
 
-              </div>
+            </div>
 
 </div>
