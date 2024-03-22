@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @simulation = Simulation.find(11)
   end
 
 end

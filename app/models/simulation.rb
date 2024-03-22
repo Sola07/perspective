@@ -17,9 +17,10 @@ class Simulation < ApplicationRecord
     loyer_hc + (charges_locatives / 12 )
   end
 
-  def loyer_an
-    loyer_cc * 12
-  end
+  # def loyer_an
+  #   loyer_cc * 12
+  # end
+
 # recettes locatives
   def recette_loc
     return ((self.loyer_cc * 12) * (1 - TX_VAC))
