@@ -65,7 +65,7 @@ class SimulationsController < ApplicationController
     @simulation = Simulation.find(params[:id])
     @simulation.update(simulation_params)
     if @simulation.save
-      redirect_to edit_last_step_simulation_path(@simulation)
+      redirect_to profile_path(@simulation)
     else
       render :edit_last_step, status: :unprocessable_entity
     end
@@ -79,7 +79,7 @@ class SimulationsController < ApplicationController
   private
 
   def simulation_params
-    params.require(:simulation).permit(:prix_du_bien, :prix_travaux_renov, :prix_travaux_cont, :achat_meubles,
+    params.require(:simulation).permit(:prix_du_bien, :prix_travaux_renov, :prix_travaux_cont, :achat_meubles, :frais_achat,
                                        :apport, :duree_credit_an, :taux_interet, :taux_assurance,
                                        :loyer_hc, :charges_locatives,
                                        :autres_charges, :taxe_fonciere,
