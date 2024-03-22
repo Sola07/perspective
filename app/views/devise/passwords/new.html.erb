@@ -1,18 +1,36 @@
-<h2>Forgot your password?</h2>
+<%# <h2>Forgot your password?</h2> %>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+<div class="main-new">
+  <div class="new-card">
+    <div class="new-logo">
+        <%# <%= image_tag("logo-perspective-OR") %>
+    </div>
+    <h2>Mot de passe oublié ?</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="form-inputs">
+
+
+
+        <div class="form-inline2">
+          <%= f.input :email,
+              label: "Adresse e-mail",
+              required: false,
+              autofocus: true,
+              wrapper_html: { class: "form-group-inline" },
+              input_html: { class: "form-input-inline2", placeholder: "albert.dupont@gmail.com" },
+              label_html: { class: "form-label-inline2" }
+          %>
+        </div>
+
+
+
+      </div>
+
+      <div class="main-button2">
+        <%= f.button :submit, "Réinitialiser mon mot de passe" %>
+      </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <% end %>
+</div>
