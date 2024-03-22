@@ -74,7 +74,7 @@
         <div class="pink-card">
           <h2>Bilan mensuel avant impôts</h2>
             <div>
-              <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= @simulation.recette_loc %></div></span>
+              <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= @simulation.recette_loc.round(2) %></div></span>
               <span class="card-line"><p>Charges totales</p><div class="input-perso"><%= @simulation.charg_an.round(2) %></div></span>
               <span class="card-line"><p>Résultats</p><div class="input-perso"><%= @simulation.bilan_me_av_impots.round(2) %></div></span>
             </div>
