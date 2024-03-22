@@ -1,40 +1,74 @@
-<%# <h2>Sign up</h2> %>
-
-
+<%# Sign_up%>
 <div class="main-new">
+  <div class="new-card">
+    <div class="new-logo">
+        <%# <%= image_tag("logo-perspective-OR") %>
+    </div>
+    <h2>Créer mon compte</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="new-logo">
-<img src="/app/assets/images/logo-perspective-OR.png" alt="">
+      <div class="form-inputs">
+
+        <div class="form-inline2">
+          <%= f.input :first_name,
+              label: "Nom",
+              required: false,
+              autofocus: true,
+              wrapper_html: { class: "form-group-inline" },
+              input_html: { class: "form-input-inline2", placeholder: "Dupont" },
+              label_html: { class: "form-label-inline2" }
+          %>
+        </div>
+
+        <div class="form-inline2">
+          <%= f.input :last_name,
+              label: "Prénom",
+              required: false,
+              autofocus: true,
+              wrapper_html: { class: "form-group-inline" },
+              input_html: { class: "form-input-inline2", placeholder: "Albert" },
+              label_html: { class: "form-label-inline2" }
+          %>
+        </div>
+
+        <div class="form-inline2">
+          <%= f.input :email,
+              label: "Adresse e-mail",
+              required: false,
+              autofocus: true,
+              wrapper_html: { class: "form-group-inline" },
+              input_html: { class: "form-input-inline2", placeholder: "albert.dupont@gmail.com" },
+              label_html: { class: "form-label-inline2" }
+          %>
+        </div>
+
+        <div class="form-inline2">
+          <%= f.input :password,
+              label: "Mot de passe",
+              required: false,
+              input_html: { autocomplete: "current-password" },
+              wrapper_html: { class: "form-group-inline" },
+              input_html: { class: "form-input-inline2", placeholder: "**********" },
+              label_html: { class: "form-label-inline2" }
+          %>
+        </div>
+
+        <div class="form-inline2">
+          <%= f.input :password,
+              label: "Confirmer mon mot de passe",
+              required: false,
+              input_html: { autocomplete: "current-password" },
+              wrapper_html: { class: "form-group-inline" },
+              input_html: { class: "form-input-inline2", placeholder: "**********" },
+              label_html: { class: "form-label-inline2" }
+          %>
+        </div>
+
+      </div>
+
+      <div class="main-button2">
+        <%= f.button :submit, "Créer mon compte" %>
+      </div>
+  </div>
+    <% end %>
 </div>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-     <div class="new-email">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-       </div>
-
-      <div class="new-password">
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
-
-      <div class="new-signin">
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-  <% end %>
-  </div>
-  <%# <%= render "devise/shared/links" %>
-
- </div>
-  </div>
