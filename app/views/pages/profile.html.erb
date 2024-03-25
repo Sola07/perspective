@@ -34,9 +34,9 @@
         <div class="pink-card">
           <h2>Votre projet</h2>
             <div>
-              <span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso"><%= @simulation.total_acq %></div></span>
+              <span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso"><%= @simulation.prix_du_bien %></div></span>
               <span class="card-line"><p>Frais de notaire</p><div class="input-perso"> <%=  @simulation.frais_notaire.round(2) %> </div></span>
-              <span class="card-line"><p>Travaux</p><div class="input-perso">60 000 €</div></span>
+              <span class="card-line"><p>Travaux</p><div class="input-perso"> <%= @simulation.prix_travaux_cont + @simulation.prix_travaux_renov %> </div></span>
               <span class="card-line"><p>Achat meubles</p><div class="input-perso"><%= @simulation.achat_meubles %></div></span>
             </div>
         </div>
@@ -65,7 +65,7 @@
             <div>
               <span class="card-line"><p>Apport</p><div class="input-perso"><%= @simulation.apport %></div></span>
               <span class="card-line"><p>Montant du crédit</p><div class="input-perso"><%= @simulation.mont_cre %></div></span>
-              <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= @simulation.duree_m %></div></span>
+              <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= @simulation.duree_credit_an %> ans</div></span>
               <span class="card-line"><p>Taux d'intérêt</p><div class="input-perso">2,5%</div></span>
               <span class="card-line"><p>Taux assurance emprunt</p><div class="input-perso">0,25%</div></span>
               <span class="card-line"><p>Mensualités</p><div class="input-perso"><%= @simulation.mens_ass.round(2) %></div></span>
@@ -74,17 +74,17 @@
         <div class="pink-card">
           <h2>Bilan mensuel avant impôts</h2>
             <div>
-              <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= @simulation.recette_loc %></div></span>
+              <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= @simulation.recette_loc.round(2) %></div></span>
               <span class="card-line"><p>Charges totales</p><div class="input-perso"><%= @simulation.charg_an.round(2) %></div></span>
               <span class="card-line"><p>Résultats</p><div class="input-perso"><%= @simulation.bilan_me_av_impots.round(2) %></div></span>
             </div>
         </div>
         <div class="results">
           <div class="pink-card result">
-            <span class="card-line"><h2>Recettes locatives</h2><div class="input-perso"><%= @simulation.recette_loc %></div></span>
+            <span class="card-line"><h2>Rentabilité brute</h2><div class="input-perso"><%= @simulation.rend_brut.round(2) %> %</div></span>
           </div>
           <div class="pink-card result">
-            <span class="card-line"><h2>Rentabilité nette</h2><div class="input-perso"><%= @simulation.rent_net_lmnp_mb.round(2) %></div></span>
+            <span class="card-line"><h2>Rentabilité nette</h2><div class="input-perso"><%= @simulation.rend_net.round(2) %> % </div></span>
           </div>
           </div>
       </div>
@@ -95,7 +95,7 @@
             <div class="result_add_table">
 
               <h3 class="title_result_add_table">Simulation fiscale</h3>
-                <div class="result_container">
+                <div class="result_container_profile">
 
                   <div class="result_header">
                     <p>Loyer annuel</p>
@@ -104,9 +104,9 @@
                     <p>Amortissement mobilier</p>
                     <p>Charges annuelles</p>
                     <p>Intérêts d'emprunt</p>
-                    <p>Revenus imposables</p>
-                    <p>Taux d'imposition</p>
                     <p>Coût en  impôts de l’opération</p>
+                    <p>Cash mensuel net</p>
+                    <p>Rentabilité nette</p>
 
                   </div>
 
@@ -119,9 +119,9 @@
                         <p>3 000 euros</p>
                         <p><%= @simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges %> euros</p>
                         <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
-                        <p><%= @simulation.revenu_net_impo %> euros</p>
-                        <p>41%</p>
-                        <p class="result_impot"> 0 euros</p>
+                        <p><%= @simulation.rev_bic_impos_lmnp_mb%> euros</p>
+                        <p> <%= @simulation.cash_mens_ap_imp_lmnp_mb.round(2) %> euros</p>
+                        <p class="result_impot"><%= @simulation.rent_net_lmnp_mb.round(2) %></p>
                       </div>
                   </div>
 

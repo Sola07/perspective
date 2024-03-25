@@ -7,7 +7,8 @@ h3 {
 }
 
 .result_add_table {
-  margin-top: 40px;
+  margin: 0;
+  justify-content: center;
 }
 
 .title_result_add_table {
@@ -25,8 +26,21 @@ h3 {
   border-radius: 10px;
 }
 
-.result_header {
+.result_container_profile {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
   color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 0;
+  justify-content: center;
+}
+
+.result_header {
+  // color: rgb(18, 55, 73);
+  color: red;
   font-family: "Roboto", sans-serif;
 
   p {
