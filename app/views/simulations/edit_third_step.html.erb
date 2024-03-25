@@ -13,24 +13,39 @@
 </div>
 
 
-<div class="form-container">
+<div class="form-container" data-controller="fields">
 
 <%= simple_form_for @simulation, url: update_third_step_simulation_path(@simulation), data: { turbo: false}, method: :patch do |f| %>
 
 <div class="form-inline">
-  <%= f.input :autres_charges,
-       label: "Autres charges<i class='fa-solid fa-circle-info'></i>".html_safe,
+  <%= f.input :autres_charges, required:true,
+       label: "Autres charges<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez les charges concernant le bien</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 200" },
+       input_html: {
+       type: "text",
+       class: "form-input-inline",
+       placeholder: "Ex : 200",
+       pattern: "\\d{2,4}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4);",
+       'data-fields-target': 'numberField12',
+       'data-action': 'input->fields#validatefield12'},
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
+
 <div class="form-inline">
-  <%= f.input :taxe_fonciere,
-       label: "Taxe foncière annuelle<i class='fa-solid fa-circle-info'></i>".html_safe,
+  <%= f.input :taxe_fonciere, required:true,
+       label: "Taxe foncière annuelle<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez la taxe foncère annuelle</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 1 200" },
+       input_html: {
+       type: "text",
+       class: "form-input-inline",
+       placeholder: "Ex : 1 200",
+       pattern: "\\d{2,4}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4);",
+       'data-fields-target': 'numberField13',
+       'data-action': 'input->fields#validatefield13'},
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
