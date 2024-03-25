@@ -12,4 +12,11 @@ class PagesController < ApplicationController
         @simulation = @simulations.last
       end
   end
+
+  def info_sci
+  end
+
+  def info_lmnp
+  end
+
 end

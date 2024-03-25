@@ -78,10 +78,34 @@
   </div>
 </div>
 
-  <div>
-    <h5>Vous souhaitez avoir plus de details sur votre projet, l'enregistrer ou le modifier ?</h5>
-    <%= link_to "Enregistrer ma simulation",  profile_path, data: {turbo: false}, class:"main-button", id: "result_main_btn" %>
   </div>
+
+  <button type="button" class= "main-button", id = "result_main_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Enregistrer ma simulation
+  </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" id="text-popup">
+        <h1 class="popfont" id="exampleModalLabel">Je donne un nom à ma simulation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @simulation, url: update_name_path(@simulation), data: { turbo: false }, method: :patch do |f| %>
+        <%= f.input :name %>
+        <div class="modal-footer">
+        <button type="button" class="button-popup-close" data-bs-dismiss="modal">Annuler</button>
+        <%= f.button :submit, "Sauvegarder", class: "button-popup" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <%# ------ %>
 

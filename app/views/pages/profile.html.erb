@@ -8,7 +8,7 @@
             <span class="white-header-card-line">
                 <i class="fa-regular fa-file"></i>
                 <%= link_to profile_path({id: simulation}), class:"mini-button" do %>
-                <span id='button-text'><%= simulation.id %></span>
+                <span id='button-text'><%= simulation.name%></span>
                 <% end %>
                 <div class="date-icones">
                   <p>02.03.23</p>
@@ -34,7 +34,7 @@
 
     <div class="simulation-affichage">
       <div class="title-perso">
-        <h2>Maison Endoume</h2>
+        <h2><%= @simulation.name %></h2>
       </div>
       <div class="pink-card-grid">
         <div class="pink-card">
