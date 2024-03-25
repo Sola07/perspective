@@ -19,7 +19,7 @@
 
 <div class="form-inline">
   <%= f.input :autres_charges,
-       label: "Autres charges",
+       label: "Autres charges<i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 200" },
        label_html: { class: "form-label-inline" }
@@ -28,7 +28,7 @@
 
 <div class="form-inline">
   <%= f.input :taxe_fonciere,
-       label: "Taxe foncière annuelle",
+       label: "Taxe foncière annuelle<i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 1 200" },
        label_html: { class: "form-label-inline" }
