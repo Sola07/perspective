@@ -4,17 +4,23 @@
       <div class="white-header-card">
         <h2>Mes simulations</h2>
         <div>
-          <span class="white-header-card-line">
-            <i class="fa-regular fa-file"></i>
-            <%= link_to '#', class:"mini-button" do %>
-              <span id='button-text'>Maison Endoume</span>
-            <% end %>
-            <div class="date-icones">
-              <p>02.03.23</p>
-              <i class="fa-solid fa-trash"></i>
-              <i class="fa-regular fa-pen-to-square"></i>
-            </div>
-          </span>
+          <% @simulations.each do |simulation| %>
+            <span class="white-header-card-line">
+                <i class="fa-regular fa-file"></i>
+                <%= link_to profile_path({id: simulation}), class:"mini-button" do %>
+                <span id='button-text'><%= simulation.id %></span>
+                <% end %>
+                <div class="date-icones">
+                  <p>02.03.23</p>
+                  <%= link_to simulation_path(simulation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
+                  <%= link_to new_simulation_path({id: simulation}), data: { turbo: false } do %>
+                  <i class="fa-regular fa-pen-to-square"> </i>
+                  <% end %>
+              </div>
+            </span>
+          <% end %>
         </div>
       </div>
       <div class="results" >

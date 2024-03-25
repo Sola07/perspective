@@ -5,7 +5,11 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @simulation = Simulation.last
+    @simulations = Simulation.where(user: current_user)
+      if params[:id].present?
+        @simulation = Simulation.find(params[:id])
+      else
+        @simulation = @simulations.last
+      end
   end
-
 end

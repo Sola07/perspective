@@ -5,14 +5,14 @@
 
 
 <div class="breadcrumb">
-<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path, data: { turbo: false}, class:"link-back" %>
+<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path({id: @simulation}), data: { turbo: false}, class:"link-back" %>
 <i class="fa-solid fa-chevron-right"></i>
 <strong>Financement</strong></h2>
 </div>
 
 <div class="form-container">
 
-<%= simple_form_for @simulation, url: update_first_step_simulation_path(@simulation), data: { turbo: false, toto: 'tutu'}, method: :patch do |f| %>
+<%= simple_form_for @simulation, url: update_first_step_simulation_path(@simulation), data: { turbo: false }, method: :patch do |f| %>
 
 <div class="form-inline">
   <%= f.input :apport,
