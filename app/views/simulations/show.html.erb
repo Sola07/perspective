@@ -2,15 +2,15 @@
 <div class="result_container">
 
   <div class="result_header">
-    <p>Loyer annuel</p>
-    <p>Charges déductibles</p>
-    <p>Amortissement immobilier</p>
-    <p>Amortissement mobilier</p>
-    <p>Charges annuelles</p>
-    <p>Intérêts d'emprunt</p>
-    <p>Coût en  impôts de l’opération</p>
-    <p>Cash mensuel net</p>
-    <p>Rentabilité nette</p>
+        <p>Loyer annuel</p>
+        <p>Charges déductibles</p>
+        <p>Amortissement immobilier</p>
+        <p>Amortissement mobilier</p>
+        <p>Charges annuelles</p>
+        <p>Intérêts d'emprunt</p>
+        <p>Coût en  impôts de l’opération</p>
+        <p>Cash mensuel net</p>
+        <p>Rentabilité nette</p>
 
   </div>
 
@@ -18,30 +18,30 @@
   <div class="result_card">
     <p class="result-name">Location Meublée <br> Non Professionnelle</p>
       <div class="result_card_bottom_pink">
-        <p><%= @simulation.recette_loc %> euros</p>
-        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
-        <p>7 700 euros</p>
-        <p>3 000 euros</p>
-        <p><%= @simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges %> euros</p>
-        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
-        <p><%= @simulation.rev_bic_impos_lmnp_mb%> euros</p>
-        <p> <%= @simulation.cash_mens_ap_imp_lmnp_mb.round(2) %> euros</p>
-        <p class="result_impot"><%= @simulation.rent_net_lmnp_mb.round(2) %></p>
+        <p><%= @simulation.recette_loc %> €</p>
+        <p><%= @simulation.char_deduct_lmnp_mb %> €</p>
+        <p>7 700 €</p>
+        <p>3 000 €</p>
+        <p><%= @simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges %> €</p>
+        <p><%= @simulation.char_deduct_lmnp_mb %> €</p>
+        <p><%= @simulation.rev_bic_impos_lmnp_mb%> €</p>
+        <p> <%= @simulation.cash_mens_ap_imp_lmnp_mb.round(2) %> €</p>
+        <p class="result_impot"><%= @simulation.rent_net_lmnp_mb.round(2) %> €</p>
       </div>
   </div>
 
   <div class="result_card">
     <p class="result-name">Nom propre</p>
     <div class="result_card_bottom_pink">
-    <p>18 400 euros</p>
+    <p>18 400 €</p>
     <p>0%</p>
-    <p>7 700 euros</p>
-    <p>3 000 euros</p>
-    <p>25 000 euros</p>
-    <p>2 000 euros</p>
+    <p>7 700 €</p>
+    <p>3 000 €</p>
+    <p>25 000 €</p>
+    <p>2 000 €</p>
     <p> - </p>
     <p>41%</p>
-    <p> <b>0 euros</b></p>
+    <p> <b>0 €</b></p>
 
     </div>
   </div>
@@ -49,30 +49,30 @@
   <div class="result_card">
     <p class="result-name">Société Civile <br> Immobilière (IS)</p>
     <div class="result_card_bottom_pink">
-    <p>18 400 euros</p>
+    <p>18 400 €</p>
     <p>0%</p>
-    <p>7 700 euros</p>
-    <p>3 000 euros</p>
-    <p>25 000 euros</p>
-    <p>2 000 euros</p>
+    <p>7 700 €</p>
+    <p>3 000 €</p>
+    <p>25 000 €</p>
+    <p>2 000 €</p>
     <p> - </p>
     <p>41%</p>
-    <p> <b> 0 euros</b></p>
+    <p> <b> 0 €</b></p>
     </div>
   </div>
 
   <div class="result_card">
     <p class="result-name">Société Civile <br> Immobilière (IR)</p>
     <div class="result_card_bottom_pink">
-    <p>18 400 euros</p>
+    <p>18 400 €</p>
     <p>0%</p>
-    <p>7 700 euros</p>
-    <p>3 000 euros</p>
-    <p>25 000 euros</p>
-    <p>2 000 euros</p>
+    <p>7 700 €</p>
+    <p>3 000 €</p>
+    <p>25 000 €</p>
+    <p>2 000 €</p>
     <p> - </p>
     <p>41%</p>
-    <p> <b> 0 euros</b></p>
+    <p> <b> 0 €</b></p>
     </div>
   </div>
 
@@ -81,7 +81,28 @@
   <div>
     <h5>Vous souhaitez enregistrer votre projet, le modifier ou faire une nouvelle simulation ?</h5>
 
-  <button class="main-button" id="result_main_btn">
+  <%# <button class="main-button" id="result_main_btn">
           Enregistrer la simulation
-        </button>
+        </button> %>
+<%= link_to "Enregistrer la simulation", profile_path, class: "main-button", id: "result_main_btn" %>
   </div>
+
+<%# ------ %>
+
+
+<%#
+<div class="main_how_many">
+  <div class="wrap">
+      <div class="banner-image"> </div>
+        <div class="car_game_infos">
+        <h5>The Legend of Zelda : Ocarina of Time</h5>
+        <p>Nintendo 64</p>
+        <p>Nintendo</p>
+        <p>2 annonce.s pour ce jeu.</p>
+      </div>
+  </div>
+
+    <div class="button-wrap">
+      <button class="btn outline">Détails du jeu</button>
+      <button class="btn fill">Estimer mon exemplaire</button>
+    </div> %>

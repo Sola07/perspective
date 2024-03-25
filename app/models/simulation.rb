@@ -17,7 +17,12 @@ class Simulation < ApplicationRecord
     loyer_hc + (charges_locatives / 12 )
   end
 
+  # def loyer_an
+  #   loyer_cc * 12
+  # end
+
 # recettes locatives
+
   def recette_loc
     return ((self.loyer_cc * 12) * (1 - TX_VAC))
   end
@@ -29,7 +34,7 @@ class Simulation < ApplicationRecord
 
 # droit d'enregistrement = droix départementale (4.5%) + taxe communale(1.2%) + frais d'assiette du droit départementale (2.7%)
 
-    droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (self.prix_du_bien * 0.045))
+    droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (prix_du_bien * 0.045))
 
 # frais et débours annexes = frais de formalités, copies et débours
 # + contributions de sécurité immobiliėre
@@ -261,11 +266,11 @@ class Simulation < ApplicationRecord
 # ------------------ Bilan LMNP MB ---------------
 #-------------------------------------------------
 
-# charges deductibles de 50 % (charges deductibles)
+ # charges deductibles de 50 % (charges deductibles)
 
-  def char_deduct_lmnp_mb
-    abatt_50_lmnp_mb
-  end
+def char_deduct_lmnp_mb
+  abatt_50_lmnp_mb
+end
 
 # coût impot
 
@@ -286,36 +291,4 @@ class Simulation < ApplicationRecord
     ((loyer_hc * 12 * (1 - TX_VAC) - charg_an - (impot_net_lmnp_mb - impot) ) / total_acq) * 100
   end
 
-#-------------------------------------------------
-# ---------------- LMNP REGIME REEL --------------
-
-# charges + travaux
-  def charges_trav_lmnp_rr
-    ass_cr + taxe_fonciere + charges_locatives + autres_charges + prix_travaux_renov
-  end
-
-# calculs des intérêts d'emprunt pour l'année 1
-
-
-  def interets_annuel_1
-    @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum
-  end
-
-
-# calcul des dotations aux amortissements => amortissement du bien, des frais d'acquisiton, travaux et meubles
-
-  def amortissement_lmnp_rr
-
-    # base du bien amortissable = prix du bien - 2% du prix du bien
-    base_bien_amor = prix_du_bien - (prix_du_bien * 0.2)
-
-    amor_bien = (base_bien_amor * 0.4/50) + (base_bien_amor * 0.2 / 20) + (base_bien_amor * 0.2 / 20) + (base_bien_amor * 0.2 / 5)
-    amor_trav = prix_travaux_cont * 0.667
-    amor_meubl = achat_meubles * 0.2
-    amor_frais_ac = (frais_notaire + frais_achat) / 10
-
-    return amor_frais_ac + amor_bien + amor_meubl + amor_trav
-
-  end
-
-  end
+end
