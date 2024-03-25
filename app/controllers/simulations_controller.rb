@@ -1,12 +1,26 @@
 class SimulationsController < ApplicationController
 
   def new
-    @simulation = Simulation.new
+    if params[:id]
+      @simulation = Simulation.find(params[:id])
+    else
+      @simulation = Simulation.new
+    end
   end
 
   def create
     @simulation = Simulation.new(simulation_params)
     @simulation.user = current_user
+    @simulation.save
+    if @simulation.save
+      redirect_to edit_first_step_simulation_path(@simulation)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @simulation = Simulation.find(params[:id])
     @simulation.save
     if @simulation.save
       redirect_to edit_first_step_simulation_path(@simulation)
@@ -74,6 +88,12 @@ class SimulationsController < ApplicationController
   def show
     @simulation = Simulation.find(params[:id])
     # @simulation = Simulation.new
+  end
+
+  def destroy
+    @simulation = Simulation.find(params[:id])
+    @simulation.destroy
+    redirect_to profile_path, status: :see_other
   end
 
   private
