@@ -17,7 +17,12 @@ class Simulation < ApplicationRecord
     loyer_hc + (charges_locatives / 12 )
   end
 
+  # def loyer_an
+  #   loyer_cc * 12
+  # end
+
 # recettes locatives
+
   def recette_loc
     return ((self.loyer_cc * 12) * (1 - TX_VAC))
   end
@@ -29,7 +34,7 @@ class Simulation < ApplicationRecord
 
 # droit d'enregistrement = droix départementale (4.5%) + taxe communale(1.2%) + frais d'assiette du droit départementale (2.7%)
 
-    droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (self.prix_du_bien * 0.045))
+    droit_enregist = (prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (prix_du_bien * 0.045))
 
 # frais et débours annexes = frais de formalités, copies et débours
 # + contributions de sécurité immobiliėre
@@ -261,11 +266,11 @@ class Simulation < ApplicationRecord
 # ------------------ Bilan LMNP MB --------------------
 #------------------------------------------------------
 
-# charges deductibles de 50 % (charges deductibles)
+ # charges deductibles de 50 % (charges deductibles)
 
-  def char_deduct_lmnp_mb
-    abatt_50_lmnp_mb
-  end
+def char_deduct_lmnp_mb
+  abatt_50_lmnp_mb
+end
 
 # coût impot
 
@@ -284,6 +289,8 @@ class Simulation < ApplicationRecord
   def rent_net_lmnp_mb
     ((loyer_hc * 12 * (1 - TX_VAC) - charg_an - (impot_net_lmnp_mb - impot) ) / total_acq) * 100
   end
+
+
 
 #------------------------------------------------------
 # ---------------- LMNP REGIME REEL -------------------

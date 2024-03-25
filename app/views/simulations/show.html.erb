@@ -2,6 +2,7 @@
 <div class="result_container">
 
   <div class="result_header">
+
     <p>Revenu annuel</p>
     <p>Charges déductibles</p>
     <p>Amortissement</p>
@@ -75,10 +76,29 @@
     <p> <b><%= @simulation.rent_net_sci_is.round(1) %> %</b></p>
     </div>
   </div>
-
 </div>
 
   <div>
     <h5>Vous souhaitez avoir plus de details sur votre projet, l'enregistrer ou le modifier ?</h5>
     <%= link_to "Enregistrer ma simulation",  profile_path, data: {turbo: false}, class:"main-button", id: "result_main_btn" %>
   </div>
+
+<%# ------ %>
+
+
+<%#
+<div class="main_how_many">
+  <div class="wrap">
+      <div class="banner-image"> </div>
+        <div class="car_game_infos">
+        <h5>The Legend of Zelda : Ocarina of Time</h5>
+        <p>Nintendo 64</p>
+        <p>Nintendo</p>
+        <p>2 annonce.s pour ce jeu.</p>
+      </div>
+  </div>
+
+    <div class="button-wrap">
+      <button class="btn outline">Détails du jeu</button>
+      <button class="btn fill">Estimer mon exemplaire</button>
+    </div> %>
