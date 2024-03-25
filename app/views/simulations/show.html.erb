@@ -1,47 +1,48 @@
-<h3>Mes résultats</h3>
+<h3>Mes résultats la premiēre année</h3>
 <div class="result_container">
 
   <div class="result_header">
-    <p>Loyer annuel</p>
+
+    <p>Revenu annuel</p>
     <p>Charges déductibles</p>
-    <p>Amortissement immobilier</p>
-    <p>Amortissement mobilier</p>
+    <p>Amortissement</p>
+    <p>Echeances annuelles du prêt </p>
     <p>Charges annuelles</p>
     <p>Intérêts d'emprunt</p>
-    <p>Coût en  impôts de l’opération</p>
-    <p>Cash mensuel net</p>
+    <p><b>Coût en  impôts de l’opération</b></p>
+    <p><b>Cash mensuel net</b></p>
     <p>Rentabilité nette</p>
 
   </div>
 
 
   <div class="result_card">
-    <p class="result-name">Location Meublée <br> Non Professionnelle</p>
+    <p class="result-name">LMNP <br> Micro-Bic</p>
       <div class="result_card_bottom_pink">
-        <p><%= @simulation.recette_loc %> euros</p>
-        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
-        <p>7 700 euros</p>
-        <p>3 000 euros</p>
-        <p><%= @simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges %> euros</p>
-        <p><%= @simulation.char_deduct_lmnp_mb %> euros</p>
-        <p><%= @simulation.rev_bic_impos_lmnp_mb%> euros</p>
-        <p> <%= @simulation.cash_mens_ap_imp_lmnp_mb.round(2) %> euros</p>
-        <p class="result_impot"><%= @simulation.rent_net_lmnp_mb.round(2) %></p>
+        <p><%= @simulation.recette_loc.round %> €</p>
+        <p><%= @simulation.char_deduct_lmnp_mb.round %> €</p>
+        <p>0 €</p>
+        <p> <%= @simulation.remb_y_one.round %> €</p>
+        <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round %> €</p>
+        <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round %> €</p>
+        <p><b><%= @simulation.cout_imp_lmnp_mb.round %> €</b></p>
+        <p><b><%= @simulation.cash_mens_ap_imp_lmnp_mb.round%> €</b></p>
+        <p class="result_impot"><%= @simulation.rent_net_lmnp_mb.round(1) %> %</p>
       </div>
   </div>
 
   <div class="result_card">
-    <p class="result-name">Nom propre</p>
+    <p class="result-name">LMNP <br> Régime réel</p>
     <div class="result_card_bottom_pink">
-    <p>18 400 euros</p>
-    <p>0%</p>
-    <p>7 700 euros</p>
-    <p>3 000 euros</p>
-    <p>25 000 euros</p>
-    <p>2 000 euros</p>
-    <p> - </p>
-    <p>41%</p>
-    <p> <b>0 euros</b></p>
+    <p><%= @simulation.recette_loc.round %> €</p>
+    <p><%= @simulation.char_deduct_lmnp_rr.round %> €</p>
+    <p><%= @simulation.amor_bien_lmp_rr.round %> €</p>
+    <p><%= @simulation.remb_y_one.round %> €</p>
+    <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round %> €</p>
+    <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round %> €</p>
+    <p><b><%= @simulation.cout_imp_lmnp_rr.round %> €</b></p>
+    <p><b><%= @simulation.cash_mens_ap_imp_lmnp_rr.round %> €</b></p>
+    <p> <b><%= @simulation.rent_net_lmnp_rr.round(1) %> %</b></p>
 
     </div>
   </div>
@@ -49,36 +50,55 @@
   <div class="result_card">
     <p class="result-name">Société Civile <br> Immobilière (IS)</p>
     <div class="result_card_bottom_pink">
-    <p>18 400 euros</p>
-    <p>0%</p>
-    <p>7 700 euros</p>
-    <p>3 000 euros</p>
-    <p>25 000 euros</p>
-    <p>2 000 euros</p>
-    <p> - </p>
-    <p>41%</p>
-    <p> <b> 0 euros</b></p>
+    <p><%= @simulation.recette_loc.round %> €</p>
+    <p><%= @simulation.char_deduct_sci_ir.round %> €</p>
+    <p>0 €</p>
+    <p><%= @simulation.remb_y_one.round %> €</p>
+    <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round %> €</p>
+    <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round %> €</p>
+    <p><b><%= @simulation.cout_imp_sci_ir.round %> €</b></p>
+    <p><b><%= @simulation.cash_mens_ap_imp_sci_ir.round %> €</b></p>
+    <p> <b><%= @simulation.rent_net_sci_is.round(1) %> %</b></p>
     </div>
   </div>
 
   <div class="result_card">
     <p class="result-name">Société Civile <br> Immobilière (IR)</p>
     <div class="result_card_bottom_pink">
-    <p>18 400 euros</p>
-    <p>0%</p>
-    <p>7 700 euros</p>
-    <p>3 000 euros</p>
-    <p>25 000 euros</p>
-    <p>2 000 euros</p>
-    <p> - </p>
-    <p>41%</p>
-    <p> <b> 0 euros</b></p>
+    <p><%= @simulation.recette_loc.round %> €</p>
+    <p><%= @simulation.char_deduct_sci_ir.round %> €</p>
+    <p><%= @simulation.amortissement_sci_is.round %> €</p>
+    <p><%= @simulation.remb_y_one.round %> €</p>
+    <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round %> €</p>
+    <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round %> €</p>
+    <p><b><%= @simulation.cout_imp_sci_is.round %> €</b></p>
+    <p><b><%= @simulation.cash_mens_ap_imp_sci_is.round %> €</b></p>
+    <p> <b><%= @simulation.rent_net_sci_is.round(1) %> %</b></p>
     </div>
   </div>
-
 </div>
 
   <div>
-    <h5>Vous souhaitez enregistrer votre projet, le modifier ou faire une nouvelle simulation ?</h5>
+    <h5>Vous souhaitez avoir plus de details sur votre projet, l'enregistrer ou le modifier ?</h5>
     <%= link_to "Enregistrer ma simulation",  profile_path, data: {turbo: false}, class:"main-button", id: "result_main_btn" %>
   </div>
+
+<%# ------ %>
+
+
+<%#
+<div class="main_how_many">
+  <div class="wrap">
+      <div class="banner-image"> </div>
+        <div class="car_game_infos">
+        <h5>The Legend of Zelda : Ocarina of Time</h5>
+        <p>Nintendo 64</p>
+        <p>Nintendo</p>
+        <p>2 annonce.s pour ce jeu.</p>
+      </div>
+  </div>
+
+    <div class="button-wrap">
+      <button class="btn outline">Détails du jeu</button>
+      <button class="btn fill">Estimer mon exemplaire</button>
+    </div> %>

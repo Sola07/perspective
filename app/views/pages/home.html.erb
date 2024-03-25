@@ -1,33 +1,37 @@
 <div class="container-home">
-<div class="main">
-  <div class="main-text">
+  <div class="main">
+    <div class="main-text">
 
-    <h2 class="first-text">Comment choisir entre SCI et</h2>
-    <h2 class="first-text">LMNP ? Quel régime fiscal adopter ?</h2>
+      <h2 class="first-text">Comment choisir entre SCI et</h2>
+      <h2 class="first-text">LMNP ? Quel régime fiscal adopter ?</h2>
 
-  <div class="div-second-text">
-    <h1 class= "second-text">Investir en toute</h1>
-    <h1 class= "second-text">confiance</h1>
+
+    <%# <div class="div-second-text">
+      <h1 class= "second-text">Investir en toute</h1>
+      <h1 class= "second-text">confiance</h1>
+    </div> %>
+
+    <a href="https://check.so" class="buton-shine" target="_blank">Investir en toute <br>confiance</a>
+
+
+      <h4 class= "third-text">L’investissement locatif pour tous</h4>
+
+      <div class="div-fourth-text">
+        <p class= "fourth-text">Testez notre outil gratuit et sans engagement conçu pour</p>
+        <p class= "fourth-text">vous guider dans vos investissements immobiliers.</p>
+      </div>
+
+      <div class="div-button">
+        <%= link_to "Commencer ma simulation *",  new_simulation_path, data: {turbo: false}, class:"main-button" %>
+      </div>
+
+      <p class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</p>
+
   </div>
 
-    <h4 class= "third-text">L’investissement locatif pour tous</h4>
-
-  <div class="div-fourth-text">
-    <p class= "fourth-text">Testez notre outil gratuit et sans engagement conçu pour</p>
-    <p class= "fourth-text">vous guider dans vos investissements immobiliers.</p>
-  </div>
-
-  <div class="div-button">
-    <%= link_to "Commencer ma simulation *",  new_simulation_path, data: {turbo: false}, class:"main-button" %>
-  </div>
-
-  <p class="txt-perso" >*aucune donnée personnelle ne sera demandée pour obtenir les résultats de la simulation</p>
-
-  </div>
-
-  <div class="home-image">
-    <%= image_tag("img-home1_modified.jpg", class:"home-picture", alt: "description de l'image") %>
-  </div>
+    <div class="home-image">
+      <%= image_tag("img-home1_modified.jpg", class:"home-picture", alt: "description de l'image") %>
+    </div>
 
 </div>
 
@@ -42,8 +46,6 @@
     <div class="home-button">
 
       <div class="home-card">
-
-
         <div class="div-home-card-txt-1">
           <h4 class="home-card-txt-1">L’accès à notre simulateur est totalement</h4>
           <h4 class="home-card-txt-1">gratuit et sans engagement ! </h4>
@@ -58,16 +60,11 @@
         </div>
 
         <div class="div-button-account">
-          <%= link_to "Créer un compte", user_session_path, class:"main-button" %>
+          <%= link_to "Créer un compte", new_user_registration_path, class:"main-button" %>
         </div>
 
         </div>
-
-
 
     </div>
 
-
   </div>
-
-</div>

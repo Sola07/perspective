@@ -1,6 +1,30 @@
  <nav class="navbar">
-      <div class="navbar-brand"></div>
-        <div class="div">
+     <%= link_to root_path do %>
+    <div class="navbar-brand"></div>
+    <% end %>
+<%# -----
+animation text
+----- %>
+	<div class="loading-text">
+		<span class="loading-text-words">P</span>
+		<span class="loading-text-words">E</span>
+		<span class="loading-text-words">R</span>
+		<span class="loading-text-words">S</span>
+		<span class="loading-text-words">P</span>
+		<span class="loading-text-words">E</span>
+		<span class="loading-text-words">C</span>
+		<span class="loading-text-words">T</span>
+		<span class="loading-text-words">I</span>
+		<span class="loading-text-words">V</span>
+		<span class="loading-text-words">E</span>
+	</div>
+
+
+
+<%# -----
+----- %>
+
+      <div class="div">
         <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "logout-btn"  %>
         <div class="navbar-avatar-img"></div>
       </div>
