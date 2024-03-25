@@ -43,6 +43,7 @@ h3 {
 .result_header {
   // color: rgb(18, 55, 73);
   font-family: "Roboto", sans-serif;
+  margin-bottom: 8px;
 
   p {
     padding-top: 15px;
@@ -57,28 +58,16 @@ h3 {
     color: rgb(18, 55, 73);
     font-family: "Roboto", sans-serif;
   }
-  margin: 1px;
-}
-
-.result-name {
-  background-color: rgb(245, 245, 228);
-  border-radius: 8px 8px 0px 0px;
-  // border-radius: 8px;
-  color: rgb(18, 55, 73);
-  font-family: "Roboto", sans-serif;
-  // padding: 10px;
-  padding-bottom: 50px;
-  margin-bottom: 0px;
 }
 
 .result_card {
+  //  ------
+  // styl effect + hover behind à la ligne 122 to 129
+  //  ------
   color: rgb(18, 55, 73);
   font-family: "Roboto", sans-serif;
   color: rgb(18, 55, 73);
   font-family: "Roboto", sans-serif;
-  //  ------
-  // styl effect + hover behind à la ligne 103 to 110
-  //  ------
   border-radius: 4px;
   overflow: hidden;
   transition: 0, 5s;
@@ -100,23 +89,24 @@ h3 {
   border-radius: 8px;
 }
 
-//  ------
-//  ------
-.result_card:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.result_card:not(:hover) {
-  filter: grayscale(100%);
+.result-name {
+  background-color: white;
+  border-radius: 8px 8px 0px 0px;
+  // border-radius: 8px;
+  color: rgb(18, 55, 73);
+  font-family: "Roboto", sans-serif;
+  // padding: 10px;
+  padding-bottom: 50px;
+  margin-bottom: 4px;
+  font-weight: bold;
 }
 
 .result_card_bottom_pink {
   color: rgb(18, 55, 73);
   font-family: "Roboto", sans-serif;
   background-color: rgb(253, 242, 243);
-  padding-top: 10px;
-  padding-bottom: 1px;
+  // padding-top: 10px;
+  padding-bottom: 10px;
   height: auto;
   min-width: 200px;
   border-radius: 0px 0px 8px 8px;
@@ -128,6 +118,19 @@ h3 {
   font-weight: bold;
   padding-bottom: 1px;
 }
+
+.result_card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.result_card:not(:hover) {
+  filter: grayscale(100%);
+}
+
+// ---xxxxx-----
+
+// ---xxxxx-----
 
 h5 {
   color: rgb(18, 55, 73);
