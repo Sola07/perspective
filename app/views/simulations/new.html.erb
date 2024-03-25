@@ -6,35 +6,42 @@
 
 <div class="form-container">
 
-<%= simple_form_for @simulation, data: {turbo: false} do |f| %>
+<%= simple_form_for @simulation, data: {turbo: false } do |f| %>
 
-<div class="form-inline">
+<div class="form-inline" data-controller="fields">
   <%= f.input :prix_du_bien,
-       label: "Prix d’achat du bien immobilier FAI",
+       label: "Prix d’achat du bien immobilier FAI <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: {
-       type: "number",
+       type: "text",
        class: "form-input-inline",
        placeholder: "Ex : 200000",
-       pattern: "\\d{6}",
-       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6);",
-       required: "required" },
+       pattern: "\\d{7}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);",
+       'data-fields-target': 'numberField',
+       'data-action': 'input->fields#validate'},
        label_html: { class: "form-label-inline" } %>
        <p class="text-space"><strong>€</strong></p>
 </div>
 
-<div class="form-inline">
+<div class="form-inline" data-controller="fields">
   <%= f.input :prix_travaux_renov,
-       label: "Montant des travaux de rénovation",
+       label: "Montant des travaux de rénovation <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 20 000" },
+       input_html: { class: "form-input-inline",
+       type: "text",
+       pattern: "\\d{7}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);",
+       'data-fields-target': 'numberField',
+       'data-action': 'input->fields#validate',
+       placeholder: "Ex : 20000" },
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
 <div class="form-inline">
   <%= f.input :prix_travaux_cont,
-       label: "Montant des travaux de construction",
+       label: "Montant des travaux de construction <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 40 000" },
        label_html: { class: "form-label-inline" }
@@ -43,7 +50,7 @@
 
 <div class="form-inline">
   <%= f.input :achat_meubles,
-       label: "Achat de meubles",
+       label: "Achat de meubles <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 15 000" },
        label_html: { class: "form-label-inline" }
@@ -52,7 +59,7 @@
 
 <div class="form-inline">
   <%= f.input :frais_achat,
-       label: "Frais d'achat",
+       label: "Frais d'achat <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 1 500" },
        label_html: { class: "form-label-inline" }

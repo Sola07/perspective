@@ -1,5 +1,6 @@
 class Simulation < ApplicationRecord
   belongs_to :user
+
  # taux de vacance locative (en %)
   TX_VAC = 0.02
   # taux d'indexation annuelle des loyers (en %)
@@ -317,5 +318,4 @@ class Simulation < ApplicationRecord
     return amor_frais_ac + amor_bien + amor_meubl + amor_trav
 
   end
-
-  end
+end
