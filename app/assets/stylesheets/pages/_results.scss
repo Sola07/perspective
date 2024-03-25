@@ -61,6 +61,7 @@ h3 {
 }
 
 .result_card {
+  transition: 0.3s ease-in-out;
   //  ------
   // styl effect + hover behind à la ligne 122 to 129
   //  ------
@@ -121,6 +122,7 @@ h3 {
 
 .result_card:hover {
   transform: scale(1.1);
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
