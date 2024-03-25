@@ -10,7 +10,7 @@
 
 <div class="form-inline" data-controller="fields">
   <%= f.input :prix_du_bien,
-       label: "Prix d’achat du bien immobilier FAI <i class='fa-solid fa-circle-info'></i>".html_safe,
+       label: "Prix d’achat du bien immobilier FAI<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Insérez le prix total du bien, y compris les frais d'agence</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
@@ -26,7 +26,7 @@
 
 <div class="form-inline" data-controller="fields">
   <%= f.input :prix_travaux_renov,
-       label: "Montant des travaux de rénovation <i class='fa-solid fa-circle-info'></i>".html_safe,
+       label: "Montant des travaux de rénovation  <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline",
        type: "text",
@@ -41,7 +41,7 @@
 
 <div class="form-inline">
   <%= f.input :prix_travaux_cont,
-       label: "Montant des travaux de construction <i class='fa-solid fa-circle-info'></i>".html_safe,
+       label: "Montant des travaux de construction  <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 40 000" },
        label_html: { class: "form-label-inline" }
@@ -59,7 +59,7 @@
 
 <div class="form-inline">
   <%= f.input :frais_achat,
-       label: "Frais d'achat <i class='fa-solid fa-circle-info'></i>".html_safe,
+       label: "Frais d'achat  <i class='fa-solid fa-circle-info'></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline", placeholder: "Ex : 1 500" },
        label_html: { class: "form-label-inline" }
