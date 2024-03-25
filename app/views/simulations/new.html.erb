@@ -4,64 +4,82 @@
 
 <h2 class="title-form"><strong>Votre projet</strong></h2>
 
-<div class="form-container">
+<div class="form-container" data-controller="fields">
 
 <%= simple_form_for @simulation, data: {turbo: false } do |f| %>
 
-<div class="form-inline" data-controller="fields">
-  <%= f.input :prix_du_bien,
-       label: "Prix d’achat du bien immobilier FAI<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Insérez le prix total du bien, y compris les frais d'agence</span></i>".html_safe,
+<div class="form-inline">
+  <%= f.input :prix_du_bien, required:true,
+       label: "Prix d’achat du bien immobilier FAI<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez le prix total du bien, y compris les frais d'agence</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
        class: "form-input-inline",
        placeholder: "Ex : 200000",
-       pattern: "\\d{7}",
+       pattern: "\\d{5,7}",
        oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);",
-       'data-fields-target': 'numberField',
-       'data-action': 'input->fields#validate'},
+       'data-fields-target': 'numberField1',
+       'data-action': 'input->fields#validatefield1'},
        label_html: { class: "form-label-inline" } %>
        <p class="text-space"><strong>€</strong></p>
 </div>
 
-<div class="form-inline" data-controller="fields">
-  <%= f.input :prix_travaux_renov,
-       label: "Montant des travaux de rénovation  <i class='fa-solid fa-circle-info'></i>".html_safe,
+<div class="form-inline">
+  <%= f.input :prix_travaux_renov, required:true,
+       label: "Montant des travaux de rénovation<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez le montant des travaux prévus pour la rénovation, sinon mettez 0</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
        input_html: { class: "form-input-inline",
        type: "text",
-       pattern: "\\d{7}",
+       pattern: "\\d{1,7}",
        oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);",
-       'data-fields-target': 'numberField',
-       'data-action': 'input->fields#validate',
+       'data-fields-target': 'numberField2',
+       'data-action': 'input->fields#validatefield2',
        placeholder: "Ex : 20000" },
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
 <div class="form-inline">
-  <%= f.input :prix_travaux_cont,
-       label: "Montant des travaux de construction  <i class='fa-solid fa-circle-info'></i>".html_safe,
+  <%= f.input :prix_travaux_cont, required:true,
+       label: "Montant des travaux de construction<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez le montant des travaux prévus pour la construction, sinon mettez 0</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 40 000" },
+       input_html: { class: "form-input-inline",
+       type: "text",
+       pattern: "\\d{1,7}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);",
+       'data-fields-target': 'numberField3',
+       'data-action': 'input->fields#validatefield3',
+       placeholder: "Ex : 40 000" },
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
 <div class="form-inline">
-  <%= f.input :achat_meubles,
-       label: "Achat de meubles <i class='fa-solid fa-circle-info'></i>".html_safe,
+  <%= f.input :achat_meubles, required:true,
+       label: "Achat de meubles<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez le montant prévus pour l'achat de meubles, sinon mettez 0</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 15 000" },
+       input_html: { class: "form-input-inline",
+       type: "text",
+       pattern: "\\d{1,5}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 5);",
+       'data-fields-target': 'numberField4',
+       'data-action': 'input->fields#validatefield4',
+       placeholder: "Ex : 15 000" },
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
 
 <div class="form-inline">
-  <%= f.input :frais_achat,
-       label: "Frais d'achat  <i class='fa-solid fa-circle-info'></i>".html_safe,
+  <%= f.input :frais_achat, required:true,
+       label: "Frais d'achat<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez le montant des frais d'achat (frais de dossier, courtier)</span></i>".html_safe,
        wrapper_html: { class: "form-group-inline" },
-       input_html: { class: "form-input-inline", placeholder: "Ex : 1 500" },
+       input_html: { class: "form-input-inline",
+        type: "text",
+       pattern: "\\d{2,4}",
+       oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4);",
+       'data-fields-target': 'numberField5',
+       'data-action': 'input->fields#validatefield5',
+       placeholder: "Ex : 1 500" },
        label_html: { class: "form-label-inline" }
   %><p class="text-space"><strong>€</strong></p>
 </div>
@@ -73,7 +91,9 @@
       <div class="progress-bar"></div>
     </div>
 
-    <%= f.button :submit, "Suivant", class: "main-button" %>
+    <div class="form-btn">
+        <%= f.button :submit, "Suivant", class: "main-button" %>
+    </div>
 
   </div>
 <% end %>

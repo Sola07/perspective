@@ -14,21 +14,25 @@
 </h2>
 </div>
 
-<div class="form-container">
+<div class="form-container" data-controller="fields">
 
 <%= simple_form_for @simulation, url: update_last_step_simulation_path(@simulation), data: { turbo: false}, method: :patch do |f| %>
 
   <div class="form-inline">
-    <%= f.input :revenu_net_global,
-        label: "Revenus net global<i class='fa-solid fa-circle-info'></i>".html_safe,
+    <%= f.input :revenu_net_global, required:true,
+        label: "Revenus net global<i class='fa-solid fa-circle-info'><span class='tooltip-i1'>Renseignez votre revenu net global</span></i>".html_safe,
         wrapper_html: { class: "form-group-inline" },
-        input_html: { class: "form-input-inline", placeholder: "Ex : 65 000" },
+        input_html: {
+        type: "text",
+        class: "form-input-inline",
+        placeholder: "Ex : 65 000",
+        pattern: "\\d{5,7}",
+        oninput: "this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);",
+       'data-fields-target': 'numberField14',
+       'data-action': 'input->fields#validatefield14'},
         label_html: { class: "form-label-inline" }
     %><p class="text-space"><strong>€</strong></p>
   </div>
-
-
-
 
 
 </div>

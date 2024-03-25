@@ -208,25 +208,29 @@
 
 .fa-solid.fa-circle-info .tooltip-i1 {
   visibility: hidden;
+  margin-bottom: 10px;
   background-color: white;
   color: rgb(18, 55, 73);
   text-align: center;
-  border: 1px solid rgb(18, 55, 73);
+  border: 1px solid rgb(0, 152, 227);
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   border-radius: 24px;
-  padding: 15px;
+  padding: 12px;
   position: absolute;
   z-index: 1;
-  bottom: 175%;
-  left: 50%;
-  margin-left: -270px;
+  bottom: 90%;
+  left: auto;
+  right: 100%;
   opacity: 0;
-  transition: opacity 0.3s;
 }
 
 .fa-solid.fa-circle-info:hover .tooltip-i1 {
   visibility: visible;
   opacity: 1;
+}
+
+.required abbr {
+  display: none;
 }
