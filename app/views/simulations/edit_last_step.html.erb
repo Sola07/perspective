@@ -3,7 +3,7 @@
 <div class="main-container-form">
 
 <div class="breadcrumb">
-<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path, data: { turbo: false}, class:"link-back" %>
+<h2 class="title-form"><%= link_to "Votre projet", new_simulation_path({id: @simulation}), data: { turbo: false}, class:"link-back" %>
 <i class="fa-solid fa-chevron-right"></i>
 <%= link_to "Financement", edit_first_step_simulation_path, data: { turbo: false}, class:"link-back" %>
 <i class="fa-solid fa-chevron-right"></i>

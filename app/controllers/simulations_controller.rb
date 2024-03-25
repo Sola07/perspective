@@ -19,6 +19,16 @@ class SimulationsController < ApplicationController
     end
   end
 
+  def update_name
+    @simulation = Simulation.find(params[:id])
+    @simulation.update(name: params[:simulation][:name])
+    if @simulation.save
+      redirect_to profile_path(@simulation)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def update
     @simulation = Simulation.find(params[:id])
     @simulation.save
@@ -103,6 +113,8 @@ class SimulationsController < ApplicationController
                                        :apport, :duree_credit_an, :taux_interet, :taux_assurance,
                                        :loyer_hc, :charges_locatives,
                                        :autres_charges, :taxe_fonciere,
-                                       :revenu_net_global)
+                                       :revenu_net_global,
+                                       :name
+                                      )
   end
 end

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "profile", to: "pages#profile"
+  get "info_sci", to: "pages#info_sci"
+  get "info_lmnp", to: "pages#info_lmnp"
+  patch "update_name/:id", to: "simulations#update_name", as: "update_name"
 
   resources :simulations do
     member do

@@ -26,3 +26,27 @@
   font-size: 20px;
   padding: 12px 60px;
 }
+
+.button-popup {
+  background-color: rgb(237, 139, 142);
+  padding: 6px 14px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button-popup-close {
+  background-color: rgb(195, 192, 192);
+  padding: 6px 14px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
