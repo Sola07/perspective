@@ -1,32 +1,61 @@
- <nav class="navbar">
-     <%= link_to root_path do %>
-    <div class="navbar-brand"></div>
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag("logo-perspective-OR-Rect.png", alt: "logo-perspective") %>
     <% end %>
-<%# -----
-animation text
------ %>
-	<div class="loading-text">
-		<span class="loading-text-words">P</span>
-		<span class="loading-text-words">E</span>
-		<span class="loading-text-words">R</span>
-		<span class="loading-text-words">S</span>
-		<span class="loading-text-words">P</span>
-		<span class="loading-text-words">E</span>
-		<span class="loading-text-words">C</span>
-		<span class="loading-text-words">T</span>
-		<span class="loading-text-words">I</span>
-		<span class="loading-text-words">V</span>
-		<span class="loading-text-words">E</span>
-	</div>
 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-
-<%# -----
------ %>
-
-      <div class="div">
-        <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "logout-btn"  %>
-        <div class="navbar-avatar-img"></div>
+    <%# -----
+    animation text
+    ----- %>
+      <div class="loading-text">
+        <span class="loading-text-words">P</span>
+        <span class="loading-text-words">E</span>
+        <span class="loading-text-words">R</span>
+        <span class="loading-text-words">S</span>
+        <span class="loading-text-words">P</span>
+        <span class="loading-text-words">E</span>
+        <span class="loading-text-words">C</span>
+        <span class="loading-text-words">T</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">V</span>
+        <span class="loading-text-words">E</span>
       </div>
-        </div>
- </nav>
+
+    <%# -----
+    ----- %>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+          <%= link_to "#", class: "nav-link dropdown-toggle", id: "ressourcesDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+            Ressources
+          <% end %>
+          <div class="dropdown-menu" aria-labelledby="ressourcesDropdown">
+            <%= link_to "Le régime LMNP", info_lmnp_path, class: "dropdown-item" %>
+            <%= link_to "Le régime SCI", info_sci_path, class: "dropdown-item" %>
+          </div>
+        </li>
+          <li class="nav-item">
+            <%= link_to "Mon profile", profile_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag("Rija-avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

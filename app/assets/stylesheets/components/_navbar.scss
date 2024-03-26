@@ -1,59 +1,36 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar {
-  // Hex #123749
-  background-color: rgb(18, 55, 73);
-  // color: white;
-  color: rgb(230, 172, 60);
-
-  // padding: 10px 20px;
-  // Hex couleur 'or' #E6AC3C
-  // rgb couleur 'or' rgb(230, 172, 60)
-}
-
-.div {
-  display: flex;
+.navbar-lewagon {
   justify-content: space-between;
-  align-items: center;
+  background: rgb(18, 55, 73);
 }
 
-.navbar-brand {
-  width: 160px;
-  height: 50px;
-  // affichage du logo
-  background-image: asset-url("logo-perspective-OR.png");
-  background-size: 110%;
-  background-position: center;
-  padding: 0px;
-  margin-top: 15px;
-  margin-left: 50px;
-  cursor: pointer;
-
-  // font-weight: bold;
-  // color: white;
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
 }
 
-.logout-btn {
-  background-color: transparent;
-  // color: white;
-  color: rgb(230, 172, 60);
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  margin-right: 50px;
-  text-decoration: none;
+.navbar-lewagon .navbar-brand img {
+  width: 145px;
+  margin-left: 30px;
 }
 
-// .navbar-avatar-img {
-//   background-color: white;
-//   width: 40px;
-//   height: 40px;
-//   border-radius: 50%;
-//   margin-right: 50px;
+// #navbarSupportedContent {
+//   margin-right: 40px;
 // }
+
+.nav-item {
+  margin-right: 30px;
+}
+
+.navbar-nav .nav-item:last-child .nav-link {
+  color: rgb(230, 172, 60);
+}
+
+.navbar-nav .nav-item:first-child .nav-link {
+  color: rgb(230, 172, 60);
+}
+
+.navbar-nav .nav-item:nth-child(2) .nav-link {
+  color: rgb(230, 172, 60);
+}
 
 // <%# -----
 // animation texte
@@ -86,3 +63,60 @@ body {
     filter: blur(4px);
   }
 }
+
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .navbar {
+//   // Hex #123749
+//   background-color: rgb(18, 55, 73);
+//   // color: white;
+//   color: rgb(230, 172, 60);
+
+//   // padding: 10px 20px;
+//   // Hex couleur 'or' #E6AC3C
+//   // rgb couleur 'or' rgb(230, 172, 60)
+// }
+
+// .div {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// .navbar-brand {
+//   width: 160px;
+//   height: 50px;
+//   // affichage du logo
+//   background-image: asset-url("logo-perspective-OR.png");
+//   background-size: 110%;
+//   background-position: center;
+//   padding: 0px;
+//   margin-top: 15px;
+//   margin-left: 50px;
+//   cursor: pointer;
+
+//   // font-weight: bold;
+//   // color: white;
+// }
+
+// .logout-btn {
+//   background-color: transparent;
+//   // color: white;
+//   color: rgb(230, 172, 60);
+//   border: none;
+//   cursor: pointer;
+//   font-size: 14px;
+//   margin-right: 50px;
+//   text-decoration: none;
+// }
+
+// // .navbar-avatar-img {
+// //   background-color: white;
+// //   width: 40px;
+// //   height: 40px;
+// //   border-radius: 50%;
+// //   margin-right: 50px;
+// // }
