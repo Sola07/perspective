@@ -98,9 +98,9 @@
     <p><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
 
     <%# <p><%= @simulation.char_deduct_sci_ir.round €</p> %>
-    <p><%= number_with_delimiter(@simulation.char_deduct_sci_ir.round, :delimiter => " ") %> €</p>
+    <p><%= number_with_delimiter(@simulation.char_deduct_sci_is.round, :delimiter => " ") %> €</p>
 
-    <p>0 €</p>
+    <p><%= number_with_delimiter(@simulation.amortissement_sci_is.round, :delimiter => " ") %> €</p>
 
     <%# <p><%= @simulation.remb_y_one.round €</p> %>
     <p><%= number_with_delimiter(@simulation.remb_y_one.round, :delimiter => " ") %> €</p>
@@ -113,11 +113,11 @@
 
 
     <%# <p><b><%= @simulation.cout_imp_sci_ir.round  €</b></p> %>
-      <p><b><%= number_with_delimiter(@simulation.cout_imp_sci_ir.round, :delimiter => " ") %> </b>€</p>
+      <p><b><%= number_with_delimiter(@simulation.cout_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
 
 
     <%# <p><b><%= @simulation.cash_mens_ap_imp_sci_ir.round  €</b></p> %>
-      <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_sci_ir.round, :delimiter => " ") %> </b>€</p>
+      <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
 
     <%# <p> <b><%= @simulation.rent_net_sci_is.round(1) %</b></p> %>
       <p><b><%= number_with_delimiter(@simulation.rent_net_sci_is.round(1), :delimiter => " ") %> </b>€</p>
@@ -134,7 +134,7 @@
     <p><%= number_with_delimiter(@simulation.char_deduct_sci_ir.round, :delimiter => " ") %> €</p>
 
     <%# <p><%= @simulation.amortissement_sci_is.round €</p> %>
-    <p><%= number_with_delimiter(@simulation.amortissement_sci_is.round, :delimiter => " ") %> €</p>
+    <p>0 €</p>
 
 
     <%# <p><%= @simulation.remb_y_one.round €</p> %>
