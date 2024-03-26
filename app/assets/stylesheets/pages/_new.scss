@@ -28,6 +28,9 @@ h2 {
   width: 900px;
   margin-left: 300px;
   margin-bottom: 220px;
+  z-index: 2;
+  background-color: white;
+  position: relative;
 }
 
 .form-inline {
@@ -92,4 +95,29 @@ h2 {
 
 .image-femme {
   background-image: url(illustration-fille.png);
+  height: 400px;
+  width: 400px;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.new-card2 {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  gap: 20px;
+  width: 900px;
+  margin-left: 300px;
+  margin-bottom: 220px;
+  z-index: 2;
+  background-color: white;
+  position: relative;
+  margin-top: 230px;
 }
