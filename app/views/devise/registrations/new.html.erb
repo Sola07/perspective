@@ -1,8 +1,8 @@
 <%# Sign_up%>
 <div class="main-new">
-  <div class="new-card">
+  <div class="new-card2">
     <div class="new-logo">
-        <%# <%= image_tag("logo-perspective-OR") %>
+
     </div>
     <h2>Créer mon compte</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -62,17 +62,23 @@
               input_html: { class: "form-input-inline", placeholder: "**********" },
               label_html: { class: "form-label-inline" }
           %>
-        </div>
 
+        </div>
 
         <div class="main-button2">
-          <%= f.button :submit, "Créer mon compte" %>
+         <%= f.button :submit, "Créer mon compte" %>
         </div>
-      </div>
-  </div>
-    <% end %>
-</div>
 
-<div>
-<div class="image-femme"></div>
+      </div>
+
+
+<% end %>
+
+<div class="image-femme2"></div>
+
+  </div>
+
+
+
+
 </div>
