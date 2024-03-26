@@ -10,6 +10,14 @@ require "faker"
   user.save
 end
 
+user2 = User.new(
+  email: "toto@gmail.com",
+  password: "tototo",
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name
+)
+user2.save
+
 3.times do
   simulation = Simulation.new(
     prix_du_bien: Faker::Number.number(digits: 6),
@@ -25,7 +33,7 @@ end
     taxe_fonciere: Faker::Number.number(digits: 4),
     charges_locatives: Faker::Number.number(digits: 3),
     autres_charges: Faker::Number.number(digits: 3),
-    revenu_net_impo: Faker::Number.number(digits: 5),
+    revenu_net_global: Faker::Number.number(digits: 5),
     user_id: (1..3).to_a.sample
   )
   simulation.save!

@@ -24,6 +24,7 @@
         wrapper_html: { class: "form-group-inline" },
         input_html: {
         type: "text",
+        value: @simulation.revenu_net_global.zero? ? "" : @simulation.revenu_net_global.round,
         class: "form-input-inline",
         placeholder: "Ex : 65 000",
         pattern: "\\d{5,7}",

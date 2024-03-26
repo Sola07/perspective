@@ -20,8 +20,18 @@ export default class extends Controller {
   ];
 
   connect() {
-    console.log("Hello from fields_controller.js");
-  }
+    console.log()
+
+    for (let i = 1; i <= 14; i++) {
+      const methodName = `validatefield${i}`;
+      const target = `NumberField${i}`
+      const targetName = `has${target}Target`
+      console.log(targetName)
+      if (typeof this[methodName] === 'function' && this[targetName])
+        this[methodName](); // Appel de la méthode seulement si elle existe
+      }
+    }
+
 
   validatefield1() {
     if (
