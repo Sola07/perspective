@@ -1,7 +1,7 @@
 class Simulation < ApplicationRecord
   belongs_to :user
 
-  validates :prix_du_bien, numericality: { less_than_or_equal_to: 10000000 }
+  validates :prix_du_bien, numericality: { greater_than: 0.0}
 
  # taux de vacance locative (en %)
   TX_VAC = 0.02

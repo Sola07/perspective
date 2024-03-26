@@ -10,29 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_25_134204) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_26_110606) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "simulations", force: :cascade do |t|
-    t.float "prix_du_bien"
-    t.float "prix_travaux_cont"
-    t.float "prix_travaux_renov"
-    t.float "achat_meubles"
-    t.float "frais_achat"
-    t.float "apport"
-    t.integer "duree_credit_an"
-    t.float "taux_interet"
-    t.float "taux_assurance"
-    t.float "loyer_hc"
-    t.float "taxe_fonciere"
-    t.float "charges_locatives"
-    t.float "autres_charges"
-    t.float "revenu_net_global"
+    t.float "prix_du_bien", default: 0.0, null: false
+    t.float "prix_travaux_cont", default: 0.0, null: false
+    t.float "prix_travaux_renov", default: 0.0, null: false
+    t.float "achat_meubles", default: 0.0, null: false
+    t.float "frais_achat", default: 0.0, null: false
+    t.float "apport", default: 0.0, null: false
+    t.integer "duree_credit_an", default: 0, null: false
+    t.float "taux_interet", default: 0.0, null: false
+    t.float "taux_assurance", default: 0.0, null: false
+    t.float "loyer_hc", default: 0.0, null: false
+    t.float "taxe_fonciere", default: 0.0, null: false
+    t.float "charges_locatives", default: 0.0, null: false
+    t.float "autres_charges", default: 0.0, null: false
+    t.float "revenu_net_global", default: 0.0, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+    t.string "name", default: "Ma simulation", null: false
     t.index ["user_id"], name: "index_simulations_on_user_id"
   end
 

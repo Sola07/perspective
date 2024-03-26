@@ -19,6 +19,7 @@
             wrapper_html: { class: "form-group-inline" },
             input_html: {
             type: "text",
+            value: @simulation.loyer_hc.zero? ? "" : @simulation.loyer_hc.round,
             class: "form-input-inline",
             placeholder: "Ex : 1 200",
             pattern: "\\d{3,4}",
@@ -35,6 +36,7 @@
             wrapper_html: { class: "form-group-inline" },
             input_html: {
             type: "text",
+            value: @simulation.charges_locatives.zero? ? "" : @simulation.charges_locatives.round,
             class: "form-input-inline",
             placeholder: "Ex : 200",
             pattern: "\\d{2,4}",

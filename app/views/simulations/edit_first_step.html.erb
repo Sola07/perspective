@@ -20,6 +20,7 @@
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
+       value: @simulation.apport.zero? ? "" : @simulation.apport.round,
        class: "form-input-inline",
        placeholder: "Ex : 100 000",
        pattern: "\\d{1,7}",
@@ -38,6 +39,7 @@
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
+       value: @simulation.duree_credit_an.zero? ? "" : @simulation.duree_credit_an,
        class: "form-input-inline-l2",
        placeholder: "Ex : 25",
        pattern: "\\d{1,2}",
@@ -54,6 +56,7 @@
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
+       value: @simulation.taux_interet.zero? ? "" : @simulation.taux_interet.to_s.gsub(".", ","),
        class: "form-input-inline-l3",
        placeholder: "Ex : 3,5",
        pattern: "\\d{1,4}(,\\d{1,2})?",
@@ -70,6 +73,7 @@
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
+       value: @simulation.taux_assurance.zero? ? "" : @simulation.taux_assurance.to_s.gsub(".", ","),
        class: "form-input-inline-l3",
        placeholder: "Ex : 0,36",
        pattern: "\\d{1,4}(,\\d{1,2})?",
