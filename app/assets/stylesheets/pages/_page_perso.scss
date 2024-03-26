@@ -9,7 +9,7 @@
 }
 
 .white-header-card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -41,6 +41,14 @@ i {
   padding-right: 10px;
 }
 
+.card-line {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
 .white-header-card-line {
   display: flex;
   justify-content: space-between;
@@ -67,8 +75,8 @@ i {
   font-size: 25px;
 }
 
-.mini-button {
-  background-color: rgb(237, 139, 142);
+.mini-button-profile2 {
+  background-color: #ed8b8e;
   color: white;
   display: block;
   font-family: "Roboto", sans-serif;
@@ -79,11 +87,12 @@ i {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   text-align: center;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 3px;
-  padding-top: 3px;
-
+  /* padding-left: 35px; */
+  /* padding-right: 35px; */
+  /* padding-bottom: 3px; */
+  padding-top: 4px;
+  height: 35px;
+  width: 400px;
 }
 
 .title-perso {
@@ -94,4 +103,22 @@ i {
 }
 #button-text {
   padding: 0px;
+}
+
+.main-button-profile2 {
+  background-color: rgb(237, 139, 142);
+  color: white;
+  padding: 12px 70px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-align: center;
+  width: 380px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
