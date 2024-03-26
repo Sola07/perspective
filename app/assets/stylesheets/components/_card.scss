@@ -3,10 +3,16 @@
   background-position: center;
   background-size: cover;
   // opacity: 0,75;
-  opacity: 5;
+  opacity: 0, 75;
   padding: 70px;
 }
 
+.pink-card-grid-profile {
+  display: grid;
+  grid-gap: 40px;
+  margin: 0px;
+  // padding: 70px 150px;
+}
 .pink-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -39,7 +45,8 @@
   margin: 0px;
   color: #6c838e;
 }
-.card-line {
+
+.mini-button-profile .card-line {
   display: flex;
   justify-content: space-between;
   min-width: 300px;
