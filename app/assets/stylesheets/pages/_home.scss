@@ -30,6 +30,10 @@
   margin-bottom: 0px;
 }
 
+.div-first-text {
+  margin-bottom: 40px;
+}
+
 .second-text {
   font-family: "Roboto", sans-serif;
   font-size: 92px;
@@ -144,7 +148,7 @@
 
 .para {
   font-family: "Roboto", sans-serif;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
   margin-left: 45px;
   padding-bottom: 50px;
@@ -177,7 +181,8 @@
   animation: shine 6s infinite linear;
   animation-fill-mode: forwards;
   font-weight: 600;
-  font-size: 62px;
+  font-size: 90px;
+  line-height: 1.2;
 }
 
 @keyframes shine {
