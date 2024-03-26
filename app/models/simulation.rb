@@ -1,6 +1,8 @@
 class Simulation < ApplicationRecord
   belongs_to :user
 
+  validates :prix_du_bien, numericality: { less_than_or_equal_to: 10000000 }
+
  # taux de vacance locative (en %)
   TX_VAC = 0.02
   # taux d'indexation annuelle des loyers (en %)
