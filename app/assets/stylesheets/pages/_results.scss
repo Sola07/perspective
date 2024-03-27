@@ -137,10 +137,6 @@ h3 {
   filter: grayscale(100%);
 }
 
-// ---xxxxx-----
-
-// ---xxxxx-----
-
 h5 {
   color: rgb(18, 55, 73);
   font-family: "Roboto", sans-serif;
@@ -170,125 +166,9 @@ h5 {
 .show-title {
   margin-top: 30px;
 }
-// ------------------
-// ------------------
-// juju
-// ------------------
-// ------------------
 
-// body {
-//   // background: rgb(0, 212, 255);
-
-//   // background: linear-gradient(
-//   //   45deg,
-//   //   rgba(0, 212, 255, 1) 0%,
-//   //   rgba(11, 3, 45, 1) 100%
-//   // );
-
-//   background-size: cover;
-//   background-position: center;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 100vh;
-// }
-
-// .main_how_many {
-//   backdrop-filter: blur(16px) saturate(180%);
-//   padding: 38px;
-//   filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
-
-//   display: flex;
-//   flex-direction: column;
-//   border: 1px solid red;
-//   margin: 8px;
-//   padding: 8px;
-//   border-radius: 5px;
-//   background-color: white;
-// }
-
-// .wrap {
-//   width: 260px;
-//   height: 480px;
-//   display: flex;
-//   flex-direction: column;
-//   padding-bottom: 4px;
-// }
-
-// .banner-image {
-//   background-image: url(https://images.igdb.com/igdb/image/upload/t_cover_big/co3nnx.png);
-//   background-position: center;
-//   background-size: cover;
-//   height: 300px;
-//   width: 100%;
-//   border-radius: 12px;
-//   border: 1px solid rgba(255, 255, 255, 0.255);
-// }
-
-// h1 {
-//   font-family: "Righteous", sans-serif;
-//   color: black;
-//   text-transform: uppercase;
-//   font-size: 2.4rem;
-// }
-
-// p {
-//   color: black;
-//   font-family: "Lato", sans-serif;
-//   text-align: center;
-//   font-size: 0.8rem;
-//   line-height: 150%;
-//   letter-spacing: 2px;
-//   text-transform: uppercase;
-// }
-
-// .button-wrap {
-//   margin-top: 18px;
-// }
-
-// .btn {
-//   border: none;
-//   padding: 12px 24px;
-//   border-radius: 24px;
-//   font-size: 12px;
-//   font-size: 0.8rem;
-//   letter-spacing: 2px;
-//   cursor: pointer;
-// }
-
-// .btn + .btn {
-//   margin-left: 10px;
-// }
-
-// .outline {
-//   background: #0d6efd;
-//   color: rgba(255, 255, 255, 0.95);
-//   border: 1px solid #0d6efd;
-//   filter: drop-shadow(0);
-//   font-weight: bold;
-//   transition: all 0.3s ease;
-// }
-
-// .fill {
-//   background: #1edd88;
-//   color: rgba(255, 255, 255, 0.95);
-//   border: 1px solid #1edd88;
-//   filter: drop-shadow(0);
-//   font-weight: bold;
-//   transition: all 0.3s ease;
-// }
-
-// .outline:hover {
-//   transform: scale(1.125);
-//   color: #0d6efd;
-//   border-color: #0d6efd;
-//   transition: all 0.3s ease;
-// }
-
-// .fill:hover {
-//   transform: scale(1.125);
-//   color: #1edd88;
-//   border-color: #1edd88;
-//   transition: all 0.3s ease;
-// }
+h4 {
+  color: #005b96;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+}
