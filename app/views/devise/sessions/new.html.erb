@@ -23,9 +23,8 @@
           <%= f.input :password,
               label: "Mot de passe",
               required: false,
-              input_html: { autocomplete: "current-password" },
               wrapper_html: { class: "form-group-inline" },
-              input_html: { class: "form-input-inline", placeholder: "**********" },
+              input_html: { autocomplete: "current-password", class: "form-input-inline", placeholder: "**********" },
               label_html: { class: "form-label-inline" }
           %>
         </div>
