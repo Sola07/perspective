@@ -28,6 +28,6 @@ simulation = Simulation.new(
   charges_locatives: 480,
   autres_charges: 0,
   revenu_net_global: 70000,
-  user_id: 1
+  user_id: user.id
   )
   simulation.save!
