@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@kurkle/color": "^0.3.2"
+  }
+}
