@@ -63,7 +63,7 @@
     <p><%= number_with_delimiter(@simulation.amor_bien_lmp_rr.round, :delimiter => " ") %> €</p>
 
   <%# <p><%= @simulation.remb_y_one.round €</p> %>
-    <p><%= number_with_delimiter(@simulation.remb_y_one.round , :delimiter => " ") %> %</p>
+    <p><%= number_with_delimiter(@simulation.remb_y_one.round , :delimiter => " ") %> €</p>
 
 
                       <%# <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round €</p> %>
@@ -177,7 +177,9 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @simulation, url: update_name_path(@simulation), data: { turbo: false }, method: :patch do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, required:true,
+        label: "",
+        value: "" %>
         <div class="modal-footer">
         <button type="button" class="button-popup-close" data-bs-dismiss="modal">Annuler</button>
         <%= f.button :submit, "Sauvegarder", class: "button-popup" %>

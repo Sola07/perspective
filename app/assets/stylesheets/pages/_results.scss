@@ -43,7 +43,7 @@ h3 {
   border-radius: 10px;
   margin: 0;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border: 1px solid #000;
 }
@@ -81,6 +81,9 @@ h3 {
   overflow: hidden;
   transition: 0, 5s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   p {
     height: 30px;
     color: rgb(18, 55, 73);
@@ -98,6 +101,10 @@ h3 {
   border-radius: 8px;
 }
 
+.toto {
+  max-width: 100%;
+}
+
 .result-name {
   background-color: white;
   border-radius: 8px 8px 0px 0px;
@@ -108,6 +115,7 @@ h3 {
   padding-bottom: 50px;
   margin-bottom: 0px;
   font-weight: bold;
+  width: 100%;
 }
 
 .result_card_bottom_pink {
@@ -119,6 +127,9 @@ h3 {
   height: auto;
   min-width: 200px;
   border-radius: 0px 0px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .result_impot {

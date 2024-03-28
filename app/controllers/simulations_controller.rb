@@ -46,6 +46,7 @@ class SimulationsController < ApplicationController
   def update_first_step
     @simulation = Simulation.find(params[:id])
     @simulation.update(simulation_params)
+
     if @simulation.save
       redirect_to edit_second_step_simulation_path(@simulation)
     else
