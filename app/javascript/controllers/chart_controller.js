@@ -4,14 +4,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   connect() {
     console.log("Hello");
-    new Chartkick.PieChart("chart", [
-      ["Recettes locatives", Number(this.data.get("lmnp-recette-loc-value"))],
-      [
-        "Charges déductibles",
-        Number(this.data.get("lmnp-charge-deduct-value")),
-      ],
-      ["Amortissement", Number(this.data.get("lmnp-amortissement-value"))],
-      ["Autres charges", Number(this.data.get("lmnp-autres-charges-value"))],
-    ]);
+    const recetteLoc = Number(this.element.getAttribute("data-recette-loc"));
+    new Chartkick.PieChart("chart", [["Recettes locatives", recetteLoc]]);
   }
 }
