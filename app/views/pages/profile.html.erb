@@ -105,7 +105,7 @@
           </div>
         </div>
         <div class="result_add_table">
-          <h3 class="title_result_add_table">Simulation fiscale</h3>
+          <h3 class="title_result_add_table"></h3>
           <div class="result_container_profile">
             <div class="result_header">
               <p>Revenu annuel</p>
@@ -179,13 +179,44 @@
       </div>
     <% end %>
 </div>
+<% if @simulation %>
+  <div class="container-graphs">
+    <div class="graphs">
+      <h5>Rentabilités en %</h5>
+        <div  data-controller="chart" id="chart" style="height: 300px;"
+        data-rent-sciir="<%= @simulation.rent_net_sci_ir %>" data-rent-sciis="<%= @simulation.rent_net_sci_is %>" data-rent-lmnprr="<%= @simulation.rent_net_lmnp_rr%>" data-rent-lmnpmb="<%= @simulation.rent_net_lmnp_mb %>">
+        </div>
+    </div>
 
+    <div class="graphs">
+      <h5>Cout de l'impôt annuel en €</h5>
+        <div  data-controller="chart-two" id="toto" style="height: 300px;"
+        data-cout-sciir="<%= @simulation.cout_imp_sci_ir.round %>" data-cout-sciis="<%= @cout_imp_sci_is.round %>" data-cout-lmnprr="<%= @simulation.cout_imp_lmnp_rr.round %>" data-cout-lmnpmb="<%= @simulation.cout_imp_lmnp_mb.round %>">
+        </div>
+    </div>
 
-<div data-controller="chart" id="chart" style="height: 300px;"
-data-recette-loc="<%= @simulation.recette_loc.round %>">
-
-
-</div>
+      <div class="graphs">
+      <h5>Cash mensuel en €</h5>
+        <div  data-controller="chart-three" id="chart3" style="height: 300px;"
+        data-cash-sciir="<%= @simulation.cash_mens_ap_imp_sci_ir.round %>" data-cash-sciis="<%= @cash_mens_ap_imp_sci_is.round %>" data-cash-lmnprr="<%= @simulation.cash_mens_ap_imp_lmnp_rr.round %>" data-cash-lmnpmb="<%= @simulation.cash_mens_ap_imp_lmnp_mb.round %>">
+        </div>
+    </div>
+  </div>
+  <div class="container-graphs">
+    <div class="graphs">
+      <h5>Repartition des charges en €</h5>
+        <div  data-controller="chart-four" id="chart4" style="height: 300px;"
+        data-taxe="<%= @simulation.taxe_fonciere %>" data-chargloc="<%= @simulation.charges_locatives %>" data-autrecharge="<%= @simulation.charges_locatives%>" data-interet="<%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round %>">
+        </div>
+    </div>
+    <div class="graphs">
+      <h5>Charges deductibles en €</h5>
+        <div  data-controller="chart-five" id="chart5" style="height: 300px;"
+        data-chargededuc-sciir="<%= @simulation.char_deduct_sci_ir.round %>" data-chargededuc-sciis="<%= @char_deduct_sci_is.round%>" data-chargededuc-lmnprr="<%= @simulation.char_deduct_lmnp_rr.round%>" data-chargededuc-lmnpmb="<%= @simulation.char_deduct_lmnp_mb.round %>">
+        </div>
+    </div>
+  </div>
+<% end %>
 
 <%#
 <div data-controller="chart"
@@ -195,4 +226,3 @@ data-recette-loc="<%= @simulation.recette_loc.round %>">
      data-lmnp-autres-charges-value="200">
     <div id="chart" style="height: 300px;"></div>
 </div> %>
-

@@ -90,6 +90,23 @@ i {
   flex-grow: 1;
   padding-left: 10px;
 }
+.container-graphs {
+  display: flex;
+  padding: 30px 240px;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+.graphs {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    padding-left: 0;
+  }
+}
 
 .mini-button-profile2:hover {
   color: rgb(230, 172, 60);
