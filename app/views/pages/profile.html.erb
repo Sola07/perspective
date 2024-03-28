@@ -37,7 +37,7 @@
       <div class="page-results">
         <div class="simulation-affichage">
           <div class="title-perso">
-            <h2><%= @simulation.name %></h2>
+            <h2 id="title-perso-1"><%= @simulation.name %></h2>
           </div>
           <div class="pink-card-grid">
             <div class="pink-card">
@@ -76,7 +76,7 @@
                 <div>
                   <span class="card-line"><p>Apport</p><div class="input-perso"><%= number_with_delimiter(@simulation.apport.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Montant du crédit</p><div class="input-perso"><%= number_with_delimiter(@simulation.mont_cre.round, :delimiter => " ") %> €</div></span>
-                  <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= number_with_delimiter(@simulation.duree_credit_an, :delimiter => " ") %> €</div></span>
+                  <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= number_with_delimiter(@simulation.duree_credit_an, :delimiter => " ") %> ans</div></span>
                   <span class="card-line"><p>Taux d'intérêt</p><div class="input-perso"><%= number_with_delimiter(@simulation.taux_interet, :delimiter => " ") %>%</div></span>
                   <span class="card-line"><p>Taux assurance emprunt</p><div class="input-perso"><%= number_with_delimiter(@simulation.taux_assurance, :delimiter => " ") %>%</div></span>
                   <span class="card-line"><p>Mensualités</p><div class="input-perso"><%= number_with_delimiter(@simulation.mens_ass.round, :delimiter => " ") %> €</div></span>
@@ -114,7 +114,7 @@
               <p>Echeances annuelles du prêt </p>
               <p>Charges annuelles</p>
               <p>Intérêts d'emprunt</p>
-              <p><b>Coût en  impôts de l’opération</b></p>
+              <p><b>Coût en impôts de l’opération</b></p>
               <p><b>Cash mensuel net</b></p>
               <p>Rentabilité nette</p>
             </div>
@@ -178,16 +178,4 @@
         </div>
       </div>
     <% end %>
-</div>
-
-
-
-
-
-<div data-controller="chart"
-     data-lmnp-recette-loc-value="1200"
-     data-lmnp-charge-deduct-value="300"
-     data-lmnp-amortissement-value="500"
-     data-lmnp-autres-charges-value="200">
-    <div id="chart" style="height: 300px;"></div>
 </div>
