@@ -609,28 +609,22 @@ end
 # ----------------Bilan SCI IS ------------------------
 #------------------------------------------------------
 
-# coût impot de l'investissement
+  # coût impot de l'investissement
 
   def cout_imp_sci_is
-    impot_benef_fonc_sci_is.round(2)
+    @cout_imp_sci_is ||= impot_benef_fonc_sci_is.round(2)
   end
-
-  # cash mensuel aprēs imposition
 
   def cash_mens_ap_imp_sci_is
-    ((treso_an_sci_is_an1 - impot_benef_fonc_sci_is) / 12).round(2)
+    @cash_mens_ap_imp_sci_is ||= ((treso_an_sci_is_an1 - impot_benef_fonc_sci_is) / 12).round(2)
   end
-
-  # charges deductibles
 
   def char_deduct_sci_is
-    (charges_trav_lmnp_rr +  interets_annuel_1 + amortissement_sci_is).round(2)
+    @char_deduct_sci_is ||= (charges_trav_lmnp_rr +  interets_annuel_1 + amortissement_sci_is).round(2)
   end
 
-  # rentabilité nette
-
   def rent_net_sci_is
-    (((loyer_hc * 12 * (1 - TX_VAC) - charg_an - (impot_benef_fonc_sci_is) ) / total_acq) * 100).round(2)
+    @rent_net_sci_is ||= (((loyer_hc * 12 * (1 - TX_VAC) - charg_an - (impot_benef_fonc_sci_is) ) / total_acq) * 100).round(2)
   end
 
 end
