@@ -17,7 +17,7 @@ class Simulation < ApplicationRecord
 
 # loyers charges comprises
   def loyer_cc
-    (loyer_hc + (charges_locatives / 12 )).round(2)
+    (loyer_hc + charges_locatives).round(2)
   end
 
   # def loyer_an
