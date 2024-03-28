@@ -43,24 +43,16 @@
             <div class="pink-card">
             <h2>Votre projet</h2>
                 <div>
-                  <!--<span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso"><%= @simulation.prix_du_bien.round %> €</div></span>
-                  <span class="card-line"><p>Frais de notaire</p><div class="input-perso"> <%=  @simulation.frais_notaire.round %> €</div></span>
-                  <span class="card-line"><p>Travaux</p><div class="input-perso"> <%= (@simulation.prix_travaux_cont + @simulation.prix_travaux_renov).round %> €</div></span>
-                  <span class="card-line"><p>Achat meubles</p><div class="input-perso"><%= @simulation.achat_meubles.round %> €</div></span> -->
                   <span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso"><%= number_with_delimiter(@simulation.prix_du_bien.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Frais de notaire</p><div class="input-perso"><%= number_with_delimiter(@simulation.frais_notaire.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Travaux</p><div class="input-perso"><%= number_with_delimiter((@simulation.prix_travaux_cont + @simulation.prix_travaux_renov).round, :delimiter => " ") %> €</div></span>
-                  <span class="card-line"><p>Prix d'achat FAI</p><div class="input-perso"><%= number_with_delimiter(@simulation.achat_meubles.round, :delimiter => " ") %> €</div></span>
+                  <span class="card-line"><p>Frais d'achat</p><div class="input-perso"><%= number_with_delimiter(@simulation.frais_achat.round, :delimiter => " ") %> €</div></span>
                 </div>
             </div>
 
             <div class="pink-card">
               <h2>Recettes locatives</h2>
                 <div>
-                  <!-- <span class="card-line"><p>Loyer mensuel HC</p><div class="input-perso"><%= @simulation.loyer_hc.round %> €</div></span>
-                  <span class="card-line"><p>Loyer mensuel CC</p><div class="input-perso"><%= @simulation.loyer_cc.round %> €</div></span>
-                  <span class="card-line"><p>Taux de révision loyer IRL</p><div class="input-perso">1%</div></span>
-                  <span class="card-line"><p>Taux de vacance locative</p><div class="input-perso">2%</div></span> -->
                   <span class="card-line"><p>Loyer mensuel HC</p><div class="input-perso"><%= number_with_delimiter(@simulation.loyer_hc.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Loyer mensuel CC</p><div class="input-perso"><%= number_with_delimiter(@simulation.loyer_cc.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Taux de révision loyer IRL</p><div class="input-perso">1%</div></span>
@@ -68,14 +60,8 @@
                 </div>
             </div>
             <div class="pink-card">
-              <h2>Recettes locatives</h2>
+              <h2>Charges</h2>
                 <div>
-                  <!-- <span class="card-line"><p>Charges locatives (an)</p><div class="input-perso"><%= (@simulation.charges_locatives * 12).round %></div></span>
-                  <span class="card-line"><p>Autres charges</p><div class="input-perso"><%= @simulation.autres_charges.round %></div></span>
-                  <span class="card-line"><p>Taux d'indexation charges</p><div class="input-perso">1%</div></span>
-                  <span class="card-line"><p>Taxe foncière annuelle</p><div class="input-perso"><%= @simulation.taxe_fonciere.round %></div></span>
-                  <span class="card-line"><p>Intérêt d'emprunt</p><div class="input-perso"><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round%></div></span>
-                  <span class="card-line"><p>Assurance crédit</p><div class="input-perso"> <%= @simulation.ass_cr.round %></div></span> -->
                   <span class="card-line"><p>Charges locatives (an)</p><div class="input-perso"><%= number_with_delimiter((@simulation.charges_locatives * 12).round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Autres charges</p><div class="input-perso"><%= number_with_delimiter(@simulation.autres_charges.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Taux d'indexation charges</p><div class="input-perso">1%</div></span>
@@ -88,26 +74,17 @@
             <div class="pink-card">
               <h2>Financement</h2>
                 <div>
-                  <!-- <span class="card-line"><p>Apport</p><div class="input-perso"><%= @simulation.apport.round %></div></span>
-                  <span class="card-line"><p>Montant du crédit</p><div class="input-perso"><%= @simulation.mont_cre.round %></div></span>
-                  <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= @simulation.duree_credit_an %> ans</div></span>
-                  <span class="card-line"><p>Taux d'intérêt</p><div class="input-perso">2,5%</div></span>
-                  <span class="card-line"><p>Taux assurance emprunt</p><div class="input-perso">0,25%</div></span>
-                  <span class="card-line"><p>Mensualités</p><div class="input-perso"><%= @simulation.mens_ass.round %></div></span> -->
                   <span class="card-line"><p>Apport</p><div class="input-perso"><%= number_with_delimiter(@simulation.apport.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Montant du crédit</p><div class="input-perso"><%= number_with_delimiter(@simulation.mont_cre.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Durée du crédit</p><div class="input-perso"><%= number_with_delimiter(@simulation.duree_credit_an, :delimiter => " ") %> €</div></span>
-                  <span class="card-line"><p>Taux d'intérêt</p><div class="input-perso">2,5%</div></span>
-                  <span class="card-line"><p>Taux assurance emprunt</p><div class="input-perso">0,25%</div></span>
+                  <span class="card-line"><p>Taux d'intérêt</p><div class="input-perso"><%= number_with_delimiter(@simulation.taux_interet, :delimiter => " ") %>%</div></span>
+                  <span class="card-line"><p>Taux assurance emprunt</p><div class="input-perso"><%= number_with_delimiter(@simulation.taux_assurance, :delimiter => " ") %>%</div></span>
                   <span class="card-line"><p>Mensualités</p><div class="input-perso"><%= number_with_delimiter(@simulation.mens_ass.round, :delimiter => " ") %> €</div></span>
                 </div>
             </div>
             <div class="pink-card">
               <h2>Bilan mensuel avant impôts</h2>
                 <div>
-                  <!-- <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= @simulation.recette_loc.round %></div></span>
-                  <span class="card-line"><p>Charges totales</p><div class="input-perso"><%= @simulation.charg_an.round %></div></span>
-                  <span class="card-line"><p>Résultats</p><div class="input-perso"><%= @simulation.bilan_me_av_impots.round %></div></span> -->
                   <span class="card-line"><p>Recettes locatives</p><div class="input-perso"><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Charges totales</p><div class="input-perso"><%= number_with_delimiter(@simulation.charg_an.round , :delimiter => " ") %> €</div></span>
                   <span class="card-line"><p>Résultats</p><div class="input-perso"><%= number_with_delimiter(@simulation.bilan_me_av_impots.round, :delimiter => " ") %> €</div></span>
@@ -116,15 +93,13 @@
 
             <div class="results">
               <div class="pink-card result">
-              <!-- <span class="card-line"><h2>Rentabilité brute</h2><div class="input-perso"><%= @simulation.rend_brut.round %> %</div></span> -->
-                <span class="card-line"><p>Rentabilité brute</p><div class="input-perso"><%= number_with_delimiter(@simulation.rend_brut.round, :delimiter => " ") %> €</div></span>
+                <span class="card-line"><p>Rentabilité brute</p><div class="input-perso"><%= number_with_delimiter(@simulation.rend_brut.round, :delimiter => " ") %> %</div></span>
 
 
               </div>
 
               <div class="pink-card result">
-                  <!-- <span class="card-line"><h2>Rentabilité nette</h2><div class="input-perso"><%= @simulation.rend_net.round %> % </div></span> -->
-                    <span class="card-line"><p>Rentabilité nette</p><div class="input-perso"><%= number_with_delimiter(@simulation.rend_net.round, :delimiter => " ") %> €</div></span>
+                    <span class="card-line"><p>Rentabilité nette</p><div class="input-perso"><%= number_with_delimiter(@simulation.rend_net.round, :delimiter => " ") %> %</div></span>
               </div>
             </div>
           </div>
@@ -146,20 +121,13 @@
             <div class="result_card">
               <p class="result-name">LMNP <br> Micro-Bic</p>
               <div class="result_card_bottom_pink">
-                <%# <p><%= @simulation.recette_loc.round €</p> %>
-                <p><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.char_deduct_lmnp_mb.round €</p> %>
+                <p class="toto"><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
                 <p><%= number_with_delimiter(@simulation.char_deduct_lmnp_mb.round, :delimiter => " ") %> €</p>
                 <p>0 €</p>
-                <%# <p> <%= @simulation.remb_y_one.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.remb_y_one.round, :delimiter => " ") %> €</p>
-                <%# <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round  €</p> %>
                 <p><%= number_with_delimiter((@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round, :delimiter => " ") %> €</p>
-                <%# <p><b><%= @simulation.cout_imp_lmnp_mb.round €</b></p> %>
                 <p> <b> <%= number_with_delimiter(@simulation.cout_imp_lmnp_mb.round, :delimiter => " ") %> €</b></p>
-                <%# <p><b><%= @simulation.cash_mens_ap_imp_lmnp_mb.round €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_lmnp_mb.round, :delimiter => " ") %> €</b></p>
                 <p class="result_impot"><%= @simulation.rent_net_lmnp_mb.round(1) %> %</p>
               </div>
@@ -167,45 +135,28 @@
             <div class="result_card">
               <p class="result-name">LMNP <br> Régime réel</p>
               <div class="result_card_bottom_pink">
-                <%# <p><%= @simulation.recette_loc.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.char_deduct_lmnp_rr.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.char_deduct_lmnp_rr.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.amor_bien_lmp_rr.round  €</p> %>
                 <p><%= number_with_delimiter(@simulation.amor_bien_lmp_rr.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.remb_y_one.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.remb_y_one.round , :delimiter => " ") %> €</p>
-                <%# <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round €</p> %>
                 <p><%= number_with_delimiter((@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round, :delimiter => " ") %> €</p>
-                <%# <p><b><%= @simulation.cout_imp_lmnp_rr.round €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cout_imp_lmnp_rr.round , :delimiter => " ") %> </b>€</p>
-                <%# <p><b><%= @simulation.cash_mens_ap_imp_lmnp_rr.round €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_lmnp_rr.round, :delimiter => " ") %> </b>€</p>
-                <%# <p> <b><%= @simulation.rent_net_lmnp_rr.round(1) %</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.rent_net_lmnp_rr.round(1), :delimiter => " ") %></b> %</p>
               </div>
             </div>
             <div class="result_card">
               <p class="result-name">Société Civile <br> Immobilière (IS)</p>
               <div class="result_card_bottom_pink">
-                <%# <p><%= @simulation.recette_loc.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.char_deduct_sci_ir.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.char_deduct_sci_is.round, :delimiter => " ") %> €</p>
                 <p><%= number_with_delimiter(@simulation.amortissement_sci_is.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.remb_y_one.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.remb_y_one.round, :delimiter => " ") %> €</p>
-                <%# <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round €</p> %>
                 <p><%= number_with_delimiter((@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round, :delimiter => " ") %> €</p>
-                <%# <p><b><%= @simulation.cout_imp_sci_ir.round  €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cout_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
-                <%# <p><b><%= @simulation.cash_mens_ap_imp_sci_ir.round  €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
-                <%# <p> <b><%= @simulation.rent_net_sci_is.round(1) %</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.rent_net_sci_is.round(1), :delimiter => " ") %> </b>%</p>
               </div>
             </div>
@@ -213,21 +164,13 @@
               <p class="result-name">Société Civile <br> Immobilière (IR)</p>
               <div class="result_card_bottom_pink">
                 <p><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.char_deduct_sci_ir.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.char_deduct_sci_ir.round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.amortissement_sci_is.round €</p> %>
                 <p>0 €</p>
-                <%# <p><%= @simulation.remb_y_one.round €</p> %>
                 <p><%= number_with_delimiter(@simulation.remb_y_one.round, :delimiter => " ") %> €</p>
-                <%# <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round  €</p> %>
                 <p><%= number_with_delimiter((@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round, :delimiter => " ") %> €</p>
-                <%# <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round  €</p> %>
                 <p><%= number_with_delimiter(@simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round, :delimiter => " ") %>€</p>
-                <%# <p><b><%= @simulation.cout_imp_sci_is.round €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cout_imp_sci_ir.round, :delimiter => " ") %> </b>€</p>
-                <%# <p><b><%= @simulation.cash_mens_ap_imp_sci_is.round €</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_sci_ir.round, :delimiter => " ") %> </b>€</p>
-                <%# <p> <b><%= @simulation.rent_net_sci_is.round(1) %</b></p> %>
                 <p><b><%= number_with_delimiter(@simulation.rent_net_sci_ir.round(1), :delimiter => " ") %> </b>%</p>
               </div>
             </div>

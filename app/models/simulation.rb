@@ -82,6 +82,12 @@ class Simulation < ApplicationRecord
     (self.total_acq - apport).round(2)
   end
 
+  # taux d'intérêt mensuel
+
+  def tx_int_m
+    tx(taux_interet) / 12
+  end
+
 # durée du crédit en mois
 
   def duree_m
@@ -91,13 +97,13 @@ class Simulation < ApplicationRecord
 # mensualités hors assurance
 
   def mens_ss_ass
-    (self.mont_cre * (tx(taux_interet ) / 12) * ((1+(tx(taux_interet)/12)) ** self.duree_m) / ((1 + (tx(taux_interet)/12)) ** 240 - 1 )).round(2)
+    self.mont_cre * tx_int_m * ((1+(tx(taux_interet)/12)) ** self.duree_m) / ((1 + (tx(taux_interet)/12)) ** 240 - 1 )
   end
 
 # mensualités avec assurance
 
   def mens_ass
-    (((self.mont_cre * tx(taux_assurance)) / 12) + self.mens_ss_ass).round(2)
+    ((self.mont_cre * tx(taux_assurance)) / 12) + self.mens_ss_ass
   end
 
 # coût de l'assurance mensuel
@@ -130,11 +136,6 @@ class Simulation < ApplicationRecord
     ((self.mens_ass - self.mens_ss_ass) * 12).round(2)
   end
 
-# taux d'intérêt mensuel
-
-  def tx_int_m
-    (tx(taux_interet / 12)).round(2)
-  end
 
 # ------------------- charges -------------------
 
@@ -151,7 +152,6 @@ class Simulation < ApplicationRecord
       capital_remb = (mens_ss_ass - interets).round(2)
       mont_cre -= (capital_remb).round(2)
       interets_mensuels << interets
-      mont_cre -= (interets).round(2)
     end
 
     return interets_mensuels
