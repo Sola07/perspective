@@ -46,6 +46,7 @@ class SimulationsController < ApplicationController
   def update_first_step
     @simulation = Simulation.find(params[:id])
     @simulation.update(simulation_params)
+
     if @simulation.save
       redirect_to edit_second_step_simulation_path(@simulation)
     else
@@ -97,7 +98,10 @@ class SimulationsController < ApplicationController
 
   def show
     @simulation = Simulation.find(params[:id])
-    # @simulation = Simulation.new
+    @cout_imp_sci_is = @simulation.cout_imp_sci_is
+    @cash_mens_ap_imp_sci_is = @simulation.cash_mens_ap_imp_sci_is
+    @char_deduct_sci_is = @simulation.char_deduct_sci_is
+    @rent_net_sci_is = @simulation.rent_net_sci_is
   end
 
   def destroy

@@ -56,11 +56,10 @@
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
-       value: @simulation.taux_interet.zero? ? "" : @simulation.taux_interet.to_s.gsub(".", ","),
+       value: @simulation.taux_interet.zero? ? "" : @simulation.taux_interet.to_s,
        class: "form-input-inline-l3",
        placeholder: "Ex : 3,5",
-       pattern: "\\d{1,4}(,\\d{1,2})?",
-       oninput: "this.value = this.value.replace(/[^0-9,]/g, '').slice(0, 4);",
+       oninput: "this.value = this.value.replace(/[^0-9.]/g, '').replace(/,/g, '.').slice(0, 4);",
        'data-fields-target': 'numberField8',
        'data-action': 'input->fields#validatefield8'},
        label_html: { class: "form-label-inline" }
@@ -73,11 +72,10 @@
        wrapper_html: { class: "form-group-inline" },
        input_html: {
        type: "text",
-       value: @simulation.taux_assurance.zero? ? "" : @simulation.taux_assurance.to_s.gsub(".", ","),
+       value: @simulation.taux_assurance.zero? ? "" : @simulation.taux_assurance.to_s,
        class: "form-input-inline-l3",
        placeholder: "Ex : 0,36",
-       pattern: "\\d{1,4}(,\\d{1,2})?",
-       oninput: "this.value = this.value.replace(/[^0-9,]/g, '').slice(0, 4);",
+       oninput: "this.value = this.value.replace(/[^0-9.]/g, '').replace(/,/g, '.').slice(0, 4);",
        'data-fields-target': 'numberField9',
        'data-action': 'input->fields#validatefield9'},
        label_html: { class: "form-label-inline" }

@@ -63,7 +63,7 @@
     <p><%= number_with_delimiter(@simulation.amor_bien_lmp_rr.round, :delimiter => " ") %> €</p>
 
   <%# <p><%= @simulation.remb_y_one.round €</p> %>
-    <p><%= number_with_delimiter(@simulation.remb_y_one.round , :delimiter => " ") %> %</p>
+    <p><%= number_with_delimiter(@simulation.remb_y_one.round , :delimiter => " ") %> €</p>
 
 
                       <%# <p><%= (@simulation.taxe_fonciere +  @simulation.charges_locatives +  @simulation.autres_charges).round €</p> %>
@@ -94,8 +94,8 @@
                       <%# <p><%= @simulation.recette_loc.round €</p> %>
     <p><%= number_with_delimiter(@simulation.recette_loc.round, :delimiter => " ") %> €</p>
 
-                      <%# <p><%= @simulation.char_deduct_sci_is.round €</p> %>
-    <p><%= number_with_delimiter(@simulation.char_deduct_sci_is.round, :delimiter => " ") %> €</p>
+                      <%# <p><%= @char_deduct_sci_is.round €</p> %>
+    <p><%= number_with_delimiter(@char_deduct_sci_is.round, :delimiter => " ") %> €</p>
 
     <p><%= number_with_delimiter(@simulation.amortissement_sci_is.round, :delimiter => " ") %> €</p>
 
@@ -109,14 +109,14 @@
     <p><%= number_with_delimiter(@simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round, :delimiter => " ") %> €</p>
 
 
-                        <%# <p><b><%= @simulation.cout_imp_sci_is.round  €</b></p> %>
-      <p><b><%= number_with_delimiter(@simulation.cout_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
+                        <%# <p><b><%= @cout_imp_sci_is.round  €</b></p> %>
+      <p><b><%= number_with_delimiter(@cout_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
 
 
-                        <%# <p><b><%= @simulation.cash_mens_ap_imp_sci_is.round  €</b></p> %>
-      <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
+                        <%# <p><b><%= @cash_mens_ap_imp_sci_is.round  €</b></p> %>
+      <p><b><%= number_with_delimiter(@cash_mens_ap_imp_sci_is.round, :delimiter => " ") %> </b>€</p>
 
-      <p><b><%= number_with_delimiter(@simulation.rent_net_sci_is.round(1), :delimiter => " ") %> </b>%</p>
+      <p><b><%= number_with_delimiter(@rent_net_sci_is.round(1), :delimiter => " ") %> </b>%</p>
 
     </div>
   </div>
@@ -144,15 +144,15 @@
                      <%# <p><%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round  €</p> %>
     <p><%= number_with_delimiter(@simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round, :delimiter => " ") %>€</p>
 
-    <%# <p><b><%= @simulation.cout_imp_sci_is.round €</b></p> %>
+    <%# <p><b><%= @cout_imp_sci_is.round €</b></p> %>
     <p><b><%= number_with_delimiter(@simulation.cout_imp_sci_ir.round, :delimiter => " ") %> </b>€</p>
 
 
-    <%# <p><b><%= @simulation.cash_mens_ap_imp_sci_is.round €</b></p> %>
+    <%# <p><b><%= @cash_mens_ap_imp_sci_is.round €</b></p> %>
     <p><b><%= number_with_delimiter(@simulation.cash_mens_ap_imp_sci_ir.round, :delimiter => " ") %> </b>€</p>
 
 
-    <%# <p> <b><%= @simulation.rent_net_sci_is.round(1) %</b></p> %>
+    <%# <p> <b><%= @rent_net_sci_is.round(1) %</b></p> %>
     <p><b><%= number_with_delimiter(@simulation.rent_net_sci_ir.round(1), :delimiter => " ") %> </b>%   </p>
 
 
@@ -177,7 +177,9 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @simulation, url: update_name_path(@simulation), data: { turbo: false }, method: :patch do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, required:true,
+        label: "",
+        value: "" %>
         <div class="modal-footer">
         <button type="button" class="button-popup-close" data-bs-dismiss="modal">Annuler</button>
         <%= f.button :submit, "Sauvegarder", class: "button-popup" %>

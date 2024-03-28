@@ -4,14 +4,13 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   connect() {
     console.log("Hello");
-    new Chartkick.PieChart("chart", [
-      ["Recettes locatives", Number(this.data.get("lmnp-recette-loc-value"))],
-      [
-        "Charges déductibles",
-        Number(this.data.get("lmnp-charge-deduct-value")),
-      ],
-      ["Amortissement", Number(this.data.get("lmnp-amortissement-value"))],
-      ["Autres charges", Number(this.data.get("lmnp-autres-charges-value"))],
-    ]);
+
+    const rentLmnpmb = Number(this.element.getAttribute("data-rent-lmnpmb"));
+    const rentLmnprr = Number(this.element.getAttribute("data-rent-lmnprr"));
+    const rentSciir = Number(this.element.getAttribute("data-rent-sciir"));
+    const rentSciis = Number(this.element.getAttribute("data-rent-sciis"));
+
+    new Chartkick.ColumnChart("chart", [["LMNP MB", rentLmnpmb], ["LMNP RR", rentLmnprr], ["SCI IS", rentSciis], ["SCI IR", rentSciir]])
+
   }
 }
