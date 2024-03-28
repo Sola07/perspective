@@ -11,10 +11,12 @@ class PagesController < ApplicationController
     else
       @simulation = @simulations.last
     end
-    @cout_imp_sci_is = @simulation.cout_imp_sci_is
-    @cash_mens_ap_imp_sci_is = @simulation.cash_mens_ap_imp_sci_is
-    @char_deduct_sci_is = @simulation.char_deduct_sci_is
-    @rent_net_sci_is = @simulation.rent_net_sci_is
+    if @simulation
+      @cout_imp_sci_is = @simulation.cout_imp_sci_is
+      @cash_mens_ap_imp_sci_is = @simulation.cash_mens_ap_imp_sci_is
+      @char_deduct_sci_is = @simulation.char_deduct_sci_is
+      @rent_net_sci_is = @simulation.rent_net_sci_is
+    end
   end
 
   def info_sci
