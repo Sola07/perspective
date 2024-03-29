@@ -190,7 +190,7 @@
     </div>
 
     <div class="graphs">
-      <h5>Cout de l'impôt annuel en €</h5>
+      <h5>Coût de l'impôt annuel en €</h5>
         <div  data-controller="chart-two" id="toto" style="height: 300px;"
         data-cout-sciir="<%= @simulation.cout_imp_sci_ir.round %>" data-cout-sciis="<%= @cout_imp_sci_is.round %>" data-cout-lmnprr="<%= @simulation.cout_imp_lmnp_rr.round %>" data-cout-lmnpmb="<%= @simulation.cout_imp_lmnp_mb.round %>">
         </div>
@@ -205,7 +205,7 @@
   </div>
   <div class="container-graphs">
     <div class="graphs">
-      <h5>Repartition des charges en €</h5>
+      <h5>Répartition des charges en €</h5>
         <div  data-controller="chart-four" id="chart4" style="height: 300px;"
         data-taxe="<%= @simulation.taxe_fonciere %>" data-chargloc="<%= @simulation.charges_locatives %>" data-autrecharge="<%= @simulation.charges_locatives%>" data-interet="<%= @simulation.int_emp_m(@simulation.mont_cre, @simulation.tx_int_m, @simulation.duree_m).first(12).sum.round %>">
         </div>
