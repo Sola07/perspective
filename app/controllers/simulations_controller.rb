@@ -1,4 +1,5 @@
 class SimulationsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def new
     if params[:id]
@@ -10,7 +11,11 @@ class SimulationsController < ApplicationController
 
   def create
     @simulation = Simulation.new(simulation_params)
-    @simulation.user = current_user
+    if current_user
+      @simulation.user = current_user
+    else
+      @simulation.user = User.find_by(first_name: "anonyme", last_name: "anonyme")
+    end
     @simulation.save
     if @simulation.save
       redirect_to edit_first_step_simulation_path(@simulation)

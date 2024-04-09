@@ -163,9 +163,16 @@
 
   </div>
 
-  <button type="button" class= "main-button", id = "result_main_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Enregistrer ma simulation
-  </button>
+
+
+  <% if current_user %>
+    <button type="button" class= "main-button", id = "result_main_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Enregistrer ma simulation
+    </button>
+   <% else %>
+    <%= link_to "Créer un compte", new_user_registration_path, class:"main-button", id: "result_main_btn" %>
+    <% end  %>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -189,7 +196,6 @@
     </div>
   </div>
 </div>
-
 
 
 <%# ------ %>
