@@ -12,6 +12,13 @@ user = User.new(
 )
 user.save
 
+user2 = User.new(
+  email: "anonyme@gmail.com",
+  password: "123456",
+  first_name: "anonyme",
+  last_name: "anonyme"
+)
+user2.save
 
 simulation = Simulation.new(
   prix_du_bien: 60000,
