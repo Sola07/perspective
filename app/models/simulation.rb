@@ -35,7 +35,7 @@ class Simulation < ApplicationRecord
 
   def frais_notaire
 
-# droit d'enregistrement = droix départementale (4.5%) + taxe communale(1.2%) + frais d'assiette du droit départementale (2.7%)
+# droit d'enregistrement = droix départemental (4.5%) + taxe communale(1.2%) + frais d'assiette du droit départemental(2.7%)
 
     droit_enregist = ((prix_du_bien * 0.045) + (prix_du_bien * 0.012) + (0.0237 * (prix_du_bien * 0.045))).round(2)
 
